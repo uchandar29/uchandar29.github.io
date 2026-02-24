@@ -15,7 +15,7 @@ export const personalInfo = {
     linkedin: "https://linkedin.com/in/urmilchandarana",
     medium: "https://medium.com/@urmilchandarana",
   },
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Resume_Urmil Jatin Chandarana.pdf",
   profileImage: "/images/profile.jpg",
 };
 
