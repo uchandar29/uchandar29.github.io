@@ -1,0 +1,144 @@
+
+
+URMIL JATIN CHANDARANA 
+ 
+Davis, California 
+ 
++1 (530) 760-6834 
+ 
+urmilchandarana@gmail.com 
+ 
+https://linkedin.com/in/urmilchandarana/ 
+ 
+ 
+EDUCATION: 
+University of California, Davis Sept 
+2025
+ - Present 
+Master of Science in Computer Science 
+GPA: 
+4.0 / 4.0
+ 
+Relevant Coursework: ECS 265: Distributed Database Systems; ECS 235A: Computer and Information Security 
+ 
+K.J. Somaiya College of Engineering, Mumbai Aug 
+2018
+ – Jun 
+2022
+ 
+Bachelor of Technology, Computer Engineering 
+GPA: 
+9.4 / 10
+ 
+Relevant Coursework: Advanced Algorithms: Design and Analysis; Operating Systems; Full Stack Development; Computer Network; Blockchain; Cloud 
+Computing Emerging Technologies. 
+ 
+WORK EXPERIENCE: 
+Associate Consultant (Full Stack Engineer) 
+Pune, India 
+Oracle Financial Services Software Limited 
+Aug 
+2022
+ – Jun 
+2025
+ 
+1. Engineered and delivered full-stack features for the Oracle Banking Digital Experience (OBDX) platform, using Spring Boot, Core Java, and OJET 
+for a major European Bank. 
+2. Streamlined  DevOps  pipelines,  reducing  manual  intervention by 
+30%
+ 
+using  tools  including  Jenkin & Gradle
+ 
+and  implemented  automation 
+guidelines to enhance team efficiency. 
+3. Orchestrated the migration from a frequent traditional application setup to a containerized environment using Docker, reducing environment 
+setup and deployment time by 
+85%
+ while achieving 
+100%
+ environment parity across development and production. 
+4. Spearheaded the development and delivery of critical modules, including a Login system via CAS & Bill Payment Functionality, ensuring seamless 
+integration under tight deadlines alongside collaborating with clients. 
+5. Led 
+7 
+product patch set upgrades, ensuring meticulous planning and error-free execution and acted as a technical SPC (Single point-of-contact) 
+for client stakeholders. 
+6. Optimized  team  efficiency  by 
+75%
+ through 
+10+
+ technical  enablement  sessions and  multiple  requirement  workshops; successfully  mitigated 
+requirement-related bugs and accelerated the adoption of new product features. 
+ 
+Technologies  /  Frameworks  Used:  Java  8  (Advanced),  JavaScript, SQL, HTML,  CSS,  OJET,  Spring  Boot,  Gradle,  Jenkins,  Subversion  (SVN), 
+Maven, DevOps, Docker, AWS, Microservices 
+ 
+Jr. Development Intern 
+Mumbai, India 
+Aloyt – The Technology Company 
+Apr 
+2021
+ – Jul 
+2021
+ 
+1. Developed a multilingual voice translation Flutter app with a Django backend; achieved real-time translation for numerous regional languages 
+by integrating Google's Speech-to-Text and Text-to-Speech APIs. 
+2. Reduced translation latency by 
+50
+% through optimizing API call sequences and implementing a Python-based language conversion module. 
+ 
+Technologies / Frameworks Used:  Flutter, Python, Django, Google APIs 
+ 
+Python Intern 
+Mumbai, India 
+Swabhav Techlabs 
+Jan 
+2021
+ – Mar 
+2021
+ 
+1. Acquired a solid foundation in Python, Django, Flask and Git, applying these technologies to an application development project. 
+2. Successfully developed a Django application as part of a team project, demonstrating hands-on expertise in full-stack development using MySQL and 
+API Development. 
+ 
+Technologies / Frameworks Used:  Python, SQL, HTML, Bootstrap 5, Git, Django, Flask 
+ 
+TECHNICAL SKILLS: 
+Programming Languages Java 8 (Advanced), C++ (Advanced), Python, HTML, CSS, JavaScript, SQL, NoSQL 
+Frameworks Spring Boot, React JS, Node JS, MERN, FastAPI, Django 
+Tools / Cloud 
+Bazel, Gradle, Maven, Docker, Jenkins, Git, SVN, Microservices, Apache Tomcat, Active MQ, AWS 
+ 
+PROJECTS: 
+Smart Crowdfunding Using Blockchain 
+Oct 
+2021
+ – Nov 
+2022
+ 
+React JS, Node JS, NoSQL, Blockchain, Solidity, Ganache, Ethereum, Bootstrap 5 
+ 
+1. Developed a transparent crowdfunding platform using Blockchain technology and Smart Contracts to enhance accountability and trust. Addressed 
+key issues in traditional crowdfunding platforms by introducing decentralized features that ensured secure and efficient transactions. 
+2. Implemented  the  project  using Ethereum  Chain  Nodes, Smart  Contracts,  and  the MERN  Framework for  seamless  front-end  and  back-end 
+integration. Used Ganache for local Ethereum testing & debugging DApp. 
+3. Designed  a unique voting  mechanism within  the  application  where  smart  contract  communication  would  ensure  funds  were  released  only  upon 
+achieving a majority vote, promoting contributor oversight. 
+4. Engineered the product’s architectural roadmap, overseeing the integration of Ethereum chain functionalities, creating product design documents 
+like Use Case Diagrams, Sequence Diagrams etc., planning database & APIs schemas. 
+ 
+AniFinder – An Animal Classification Application 
+Apr 
+2021
+ – May 
+2021
+ 
+Flutter, Machine Learning, Python, Supervised Learning, Convoluted Neural Network (CNN) 
+ 
+1. Designed and developed AniFinder, a mobile application for animal classification, using Flutter for a seamless user experience. 
+2. Enabled functionality for users (toddlers/kids) to upload or capture images directly through the application. Trained and integrated an ML model on 
+a comprehensive animal dataset with an efficacy of 89.7%, ensuring accurate classification of animal species. 
+3. Implemented end-to-end workflows, including image preprocessing, CNN model training, and result display within the app (which included the 
+animal species and information). Optimized performance by integrating the trained CNN model directly into the Flutter application, ensuring 
+efficient and real-time classification. 
+ 
