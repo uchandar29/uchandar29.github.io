@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Urmil Chandarana",
-  firstName: "Urmil",
+  firstName: "Urmil Jatin",
   lastName: "Chandarana",
   fullName: "Urmil Jatin Chandarana",
   title: "Software Engineer & CS Graduate Student",
@@ -11,7 +11,7 @@ export const personalInfo = {
   openToRelocation: true,
   bio: `I'm a passionate software engineer and Computer Science graduate student at UC Davis, driven by a deep curiosity for building robust, scalable systems. My interests lie at the intersection of Distributed Systems, System Engineering, Network Security, and exploring how AI can be integrated to enhance these domains. With nearly 3 years of industry experience at Oracle, I've engineered full-stack solutions, optimized DevOps pipelines, and led containerization migrations that transformed deployment workflows. I'm actively seeking new opportunities to learn, grow, and thrive in environments where I can take ownership and make a meaningful impact.`,
   links: {
-    github: "https://github.com/urmilchandarana",
+    github: "https://github.com/DimitriBelikov",
     linkedin: "https://linkedin.com/in/urmilchandarana",
     medium: "https://medium.com/@urmilchandarana",
   },
@@ -75,7 +75,7 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: "Associate Consultant (Full Stack Engineer)",
+    title: "Associate Consultant (Software Development Engineer)",
     company: "Oracle Financial Services Software Limited",
     location: "Pune, India",
     startDate: "Aug 2022",
@@ -89,7 +89,7 @@ export const experiences: Experience[] = [
       "Optimized team efficiency by 75% through 10+ technical enablement sessions and multiple requirement workshops; successfully mitigated requirement-related bugs and accelerated the adoption of new product features.",
     ],
     technologies: [
-      "Java 8",
+      "Core Java",
       "JavaScript",
       "SQL",
       "Spring Boot",
@@ -161,7 +161,7 @@ export const projects: Project[] = [
       "Ethereum",
       "Bootstrap 5",
     ],
-    githubUrl: "https://github.com/urmilchandarana",
+    githubUrl: "https://github.com/DimitriBelikov/smart-crowdfunding",
   },
   {
     title: "AniFinder - Animal Classification App",
@@ -181,26 +181,24 @@ export const projects: Project[] = [
       "Supervised Learning",
       "CNN",
     ],
-    githubUrl: "https://github.com/urmilchandarana",
+    githubUrl: "https://github.com/DimitriBelikov/AniFinder",
   },
 ];
 
 export const technicalSkills = {
   languages: [
-    "Java 8",
+    "Java",
     "C++",
     "Python",
-    "HTML",
-    "CSS",
+    "HTML/CSS",
     "JavaScript",
     "SQL",
-    "NoSQL",
   ],
   frameworks: [
     "Spring Boot",
     "React JS",
     "Node JS",
-    "MERN",
+    "MERN Stack",
     "FastAPI",
     "Django",
   ],
@@ -210,12 +208,11 @@ export const technicalSkills = {
     "Maven",
     "Docker",
     "Jenkins",
-    "Git",
-    "SVN",
     "Microservices",
-    "Apache Tomcat",
-    "Active MQ",
-    "AWS",
+    "SVN",
+    "NoSQL Databases",
+    "Git",
+    "Amazon Web Services (AWS)",
   ],
 };
 
