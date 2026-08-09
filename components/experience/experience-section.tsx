@@ -53,26 +53,26 @@ export function ExperienceSection() {
                 style={{
                   display: "flex",
                   flexWrap: "wrap",
-                  alignItems: "center",
+                  alignItems: "flex-start",
                   justifyContent: "space-between",
                   gap: 10,
                   marginBottom: 12,
                 }}
               >
-                <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 8 }}>
-                  <span
-                    style={{
-                      fontSize: 12.5,
-                      fontWeight: 700,
-                      letterSpacing: "0.5px",
-                      padding: "5px 11px",
-                      borderRadius: 999,
-                      background: "var(--accent-weak)",
-                      color: "var(--accent)",
-                    }}
-                  >
-                    {e.date}
-                  </span>
+                <span
+                  style={{
+                    fontSize: 12.5,
+                    fontWeight: 700,
+                    letterSpacing: "0.5px",
+                    padding: "5px 11px",
+                    borderRadius: 999,
+                    background: "var(--accent-weak)",
+                    color: "var(--accent)",
+                  }}
+                >
+                  {e.date}
+                </span>
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 6 }}>
                   <span
                     style={{
                       fontSize: 12.5,
@@ -86,19 +86,19 @@ export function ExperienceSection() {
                   >
                     {e.type}
                   </span>
+                  <span
+                    style={{
+                      fontSize: 13.5,
+                      color: "var(--muted)",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 6,
+                    }}
+                  >
+                    <Icon name="map-pin" style={{ width: 14, height: 14 }} />
+                    {e.place}
+                  </span>
                 </div>
-                <span
-                  style={{
-                    fontSize: 13.5,
-                    color: "var(--muted)",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 6,
-                  }}
-                >
-                  <Icon name="map-pin" style={{ width: 14, height: 14 }} />
-                  {e.place}
-                </span>
               </div>
               <h3 style={{ fontSize: 20, fontWeight: 600, margin: "0 0 3px", color: "var(--text)" }}>{e.role}</h3>
               <div style={{ fontSize: 15, color: "var(--accent)", fontWeight: 500, marginBottom: 14 }}>{e.org}</div>
