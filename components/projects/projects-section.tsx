@@ -70,7 +70,17 @@ export function ProjectsSection() {
             </span>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, marginBottom: 4 }}>
               <h3 style={{ fontSize: 19, fontWeight: 600, margin: 0, color: "var(--text)" }}>{p.title}</h3>
-              <span style={{ fontSize: 12, fontWeight: 600, color: "var(--muted)", whiteSpace: "nowrap" }}>
+              <span
+                style={{
+                  fontSize: 11.5,
+                  fontWeight: 600,
+                  padding: "4px 10px",
+                  borderRadius: 7,
+                  background: "var(--surface-2)",
+                  color: "var(--muted)",
+                  whiteSpace: "nowrap",
+                }}
+              >
                 {p.category}
               </span>
             </div>
