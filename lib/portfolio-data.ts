@@ -3,254 +3,236 @@ export const personalInfo = {
   firstName: "Urmil Jatin",
   lastName: "Chandarana",
   fullName: "Urmil Jatin Chandarana",
-  title: "Software Engineer & CS Graduate Student",
+  title: "Software Development Engineer",
   location: "Davis, California",
-  phone: "+1 (530) 760-6834",
+  phone: "+1 530-760-6834",
+  phoneHref: "+15307606834",
   email: "urmilchandarana@gmail.com",
-  graduationDate: "March 2027 (Expected)",
-  openToRelocation: true,
-  bio: `I'm a passionate software engineer and Computer Science graduate student at UC Davis, driven by a deep curiosity for building robust, scalable systems. My interests lie at the intersection of Distributed Systems, System Engineering, Network Security, and exploring how AI can be integrated to enhance these domains. With nearly 3 years of industry experience at Oracle, I've engineered full-stack solutions, optimized DevOps pipelines, and led containerization migrations that transformed deployment workflows. I'm actively seeking new opportunities to learn, grow, and thrive in environments where I can take ownership and make a meaningful impact.`,
+  bio: "I build resilient systems end to end — from core banking modules at Oracle to large-scale ML data pipelines and a community-first delivery platform. Currently a CS master's student at UC Davis, based in Davis, California.",
   links: {
-    github: "https://github.com/DimitriBelikov",
+    github: "https://github.com/uchandar29",
+    githubHandle: "github.com/uchandar29",
     linkedin: "https://linkedin.com/in/urmilchandarana",
+    linkedinHandle: "in/urmilchandarana",
     medium: "https://medium.com/@urmilchandarana",
+    mediumHandle: "medium.com/@urmilchandarana",
   },
   resumeUrl: "/Resume_Urmil Jatin Chandarana.pdf",
   profileImage: "/images/profile.jpg",
 };
 
-export interface Education {
-  institution: string;
-  degree: string;
-  field: string;
-  location: string;
-  startDate: string;
-  endDate: string;
-  gpa: string;
-  coursework: string[];
+export const navItems = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Contact", href: "#contact" },
+];
+
+export interface Highlight {
+  icon: string;
+  value: string;
+  label: string;
 }
 
-export const education: Education[] = [
+export const highlights: Highlight[] = [
+  { icon: "map-pin", value: "Davis, CA", label: "Based in California" },
+  { icon: "briefcase", value: "3+ yrs", label: "Shipping production software" },
+  { icon: "graduation-cap", value: "4.0 GPA", label: "MS Computer Science · UC Davis" },
+  { icon: "database", value: "600K+", label: "Samples processed on HPC" },
+];
+
+export interface SkillItem {
+  name: string;
+  icon: string;
+}
+
+export interface SkillGroup {
+  title: string;
+  icon: string;
+  items: SkillItem[];
+}
+
+export const skillGroups: SkillGroup[] = [
   {
-    institution: "University of California, Davis",
-    degree: "Master of Science",
-    field: "Computer Science",
-    location: "Davis, California",
-    startDate: "Sept 2025",
-    endDate: "March 2027 (Expected)",
-    gpa: "4.0 / 4.0",
-    coursework: [
-      "ECS 265: Distributed Database Systems",
-      "ECS 235A: Computer and Information Security",
+    title: "Programming Languages",
+    icon: "code-2",
+    items: [
+      { name: "Java", icon: "coffee" },
+      { name: "C++", icon: "braces" },
+      { name: "JavaScript", icon: "file-code" },
+      { name: "Python", icon: "code" },
+      { name: "SQL", icon: "database" },
+      { name: "TypeScript", icon: "file-code-2" },
+      { name: "HTML", icon: "code-xml" },
     ],
   },
   {
-    institution: "K.J. Somaiya College of Engineering",
-    degree: "Bachelor of Technology",
-    field: "Computer Engineering",
-    location: "Mumbai, India",
-    startDate: "Aug 2018",
-    endDate: "Jun 2022",
-    gpa: "9.4 / 10",
-    coursework: [
-      "Advanced Algorithms: Design and Analysis",
-      "Operating Systems",
-      "Full Stack Development",
-      "Computer Network",
-      "Blockchain",
-      "Cloud Computing & Emerging Technologies",
+    title: "Libraries & Frameworks",
+    icon: "boxes",
+    items: [
+      { name: "Spring Boot", icon: "leaf" },
+      { name: "Node.js", icon: "hexagon" },
+      { name: "Django", icon: "server" },
+      { name: "FastAPI", icon: "zap" },
+      { name: "Flutter", icon: "smartphone" },
+      { name: "Next.js", icon: "panels-top-left" },
+      { name: "React.js", icon: "atom" },
+      { name: "Tailwind CSS", icon: "wind" },
+    ],
+  },
+  {
+    title: "ML / Data",
+    icon: "brain-circuit",
+    items: [
+      { name: "PyTorch", icon: "flame" },
+      { name: "HuggingFace", icon: "smile" },
+      { name: "PyArrow", icon: "feather" },
+      { name: "Ollama", icon: "bot" },
+      { name: "vLLM", icon: "cpu" },
+      { name: "Model Quantization", icon: "scaling" },
+      { name: "Scikit-learn", icon: "scatter-chart" },
+    ],
+  },
+  {
+    title: "Tools / Cloud",
+    icon: "wrench",
+    items: [
+      { name: "Docker", icon: "container" },
+      { name: "Kubernetes", icon: "ship-wheel" },
+      { name: "AWS", icon: "cloud" },
+      { name: "Oracle Cloud", icon: "cloud-cog" },
+      { name: "Redis", icon: "layers" },
+      { name: "MongoDB", icon: "leaf" },
+      { name: "DynamoDB", icon: "database" },
+      { name: "Git", icon: "git-branch" },
+      { name: "GitHub Actions", icon: "git-merge" },
+      { name: "Bazel", icon: "box" },
+    ],
+  },
+  {
+    title: "AI Coding Tools",
+    icon: "sparkles",
+    items: [
+      { name: "Claude Code", icon: "terminal" },
+      { name: "Cursor", icon: "mouse-pointer-2" },
     ],
   },
 ];
 
 export interface Experience {
-  title: string;
-  company: string;
-  location: string;
-  startDate: string;
-  endDate: string;
-  highlights: string[];
-  technologies: string[];
+  date: string;
+  place: string;
+  role: string;
+  org: string;
+  points: string[];
 }
 
 export const experiences: Experience[] = [
   {
-    title: "Associate Consultant (Software Development Engineer)",
-    company: "Oracle Financial Services Software Limited",
-    location: "Pune, India",
-    startDate: "Aug 2022",
-    endDate: "Jun 2025",
-    highlights: [
-      "Engineered and delivered full-stack features for the Oracle Banking Digital Experience (OBDX) platform, using Spring Boot, Core Java, and OJET for a major European Bank.",
-      "Streamlined DevOps pipelines, reducing manual intervention by 30% using tools including Jenkins & Gradle and implemented automation guidelines to enhance team efficiency.",
-      "Orchestrated the migration from a traditional application setup to a containerized environment using Docker, reducing environment setup and deployment time by 85% while achieving 100% environment parity across development and production.",
-      "Spearheaded the development and delivery of critical modules, including a Login system via CAS & Bill Payment Functionality, ensuring seamless integration under tight deadlines alongside collaborating with clients.",
-      "Led 7 product patch set upgrades, ensuring meticulous planning and error-free execution and acted as a technical SPC (Single point-of-contact) for client stakeholders.",
-      "Optimized team efficiency by 75% through 10+ technical enablement sessions and multiple requirement workshops; successfully mitigated requirement-related bugs and accelerated the adoption of new product features.",
-    ],
-    technologies: [
-      "Core Java",
-      "JavaScript",
-      "SQL",
-      "Spring Boot",
-      "Docker",
-      "Jenkins",
-      "Gradle",
-      "AWS",
-      "Microservices",
-      "Maven",
-      "SVN",
+    date: "Apr 2026 – Present",
+    place: "Davis, CA",
+    role: "Graduate Student Researcher",
+    org: "PAIBL Lab · Project AgML, UC Davis",
+    points: [
+      "Built an automated VLM dataset ingestion pipeline that analyzes raw datasets, generates schema mappings, and converts outputs to Parquet for direct HuggingFace upload.",
+      "Developed a benchmarking framework across structural quality, difficulty, diversity, and annotation reliability, producing a leaderboard for benchmark selection.",
+      "Engineered large-scale (600K+ sample) processing on SLURM-managed HPC, resolving PyArrow/HuggingFace pipeline bottlenecks.",
     ],
   },
   {
-    title: "Jr. Development Intern",
-    company: "Aloyt - The Technology Company",
-    location: "Mumbai, India",
-    startDate: "Apr 2021",
-    endDate: "Jul 2021",
-    highlights: [
-      "Developed a multilingual voice translation Flutter app with a Django backend; achieved real-time translation for numerous regional languages by integrating Google's Speech-to-Text and Text-to-Speech APIs.",
-      "Reduced translation latency by 50% through optimizing API call sequences and implementing a Python-based language conversion module.",
+    date: "Aug 2022 – Jun 2025",
+    place: "Pune, India",
+    role: "Associate Consultant · Software Development Engineer",
+    org: "Oracle Financial Services Software",
+    points: [
+      "Engineered 10+ core banking modules on the OBDX platform using Spring Boot, Java 8, REST/SOAP APIs and microservices for a major European bank.",
+      "Orchestrated migration to a containerized CI/CD environment with Docker, cutting setup and deployment time by 85% with 100% environment parity.",
+      "Led 7 product patch-set upgrades and served as technical single point-of-contact for client stakeholders.",
     ],
-    technologies: ["Flutter", "Python", "Django", "Google APIs"],
+  },
+];
+
+export interface Education {
+  degree: string;
+  school: string;
+  date: string;
+  gpa: string;
+  detail: string;
+}
+
+export const education: Education[] = [
+  {
+    degree: "M.S. Computer Science",
+    school: "University of California, Davis",
+    date: "Sep 2025 – Present",
+    gpa: "GPA 4.0",
+    detail: "Distributed Database Systems, Computer & Information Security, Computer Networks, Visual Analytics.",
   },
   {
-    title: "Python Intern",
-    company: "Swabhav Techlabs",
-    location: "Mumbai, India",
-    startDate: "Jan 2021",
-    endDate: "Mar 2021",
-    highlights: [
-      "Acquired a solid foundation in Python, Django, Flask and Git, applying these technologies to an application development project.",
-      "Successfully developed a Django application as part of a team project, demonstrating hands-on expertise in full-stack development using MySQL and API Development.",
-    ],
-    technologies: ["Python", "SQL", "HTML", "Bootstrap 5", "Git", "Django", "Flask"],
+    degree: "B.Tech Computer Engineering",
+    school: "K.J. Somaiya College of Engineering, Mumbai",
+    date: "Aug 2018 – Jun 2022",
+    gpa: "GPA 9.4",
+    detail: "Advanced Algorithms, Operating Systems, Full-Stack Development, Blockchain, Cloud Computing.",
   },
 ];
 
 export interface Project {
   title: string;
-  description: string;
-  startDate: string;
-  endDate: string;
-  highlights: string[];
-  technologies: string[];
-  githubUrl?: string;
+  category: string;
+  period: string;
+  icon: string;
+  hasImage: boolean;
+  slotId: string;
+  blurb: string;
+  stack: string[];
 }
 
-export const projects: Project[] = [
+export const featured: Project[] = [
   {
-    title: "Smart Crowdfunding Using Blockchain",
-    description:
-      "A transparent crowdfunding platform using Blockchain technology and Smart Contracts to enhance accountability and trust.",
-    startDate: "Oct 2021",
-    endDate: "Nov 2022",
-    highlights: [
-      "Developed a transparent crowdfunding platform using Blockchain technology and Smart Contracts to enhance accountability and trust. Addressed key issues in traditional crowdfunding platforms by introducing decentralized features that ensured secure and efficient transactions.",
-      "Implemented the project using Ethereum Chain Nodes, Smart Contracts, and the MERN Framework for seamless front-end and back-end integration. Used Ganache for local Ethereum testing & debugging DApp.",
-      "Designed a unique voting mechanism within the application where smart contract communication would ensure funds were released only upon achieving a majority vote, promoting contributor oversight.",
-      "Engineered the product's architectural roadmap, overseeing the integration of Ethereum chain functionalities, creating product design documents like Use Case Diagrams, Sequence Diagrams etc., planning database & APIs schemas.",
-    ],
-    technologies: [
-      "React JS",
-      "Node JS",
-      "NoSQL",
-      "Blockchain",
-      "Solidity",
-      "Ganache",
-      "Ethereum",
-      "Bootstrap 5",
-    ],
-    githubUrl: "https://github.com/DimitriBelikov/smart-crowdfunding",
+    title: "Localbite",
+    category: "Full-Stack",
+    period: "Feb 2026 – Present",
+    icon: "utensils-crossed",
+    hasImage: true,
+    slotId: "proj-localbite",
+    blurb: "A community-first food-delivery platform cutting restaurant commissions from 30% to 8–12%, with a Redis + WebSocket phased dispatch engine and Stripe multi-party settlement.",
+    stack: ["FastAPI", "Next.js", "Redis", "Kafka", "WebSocket", "Stripe"],
   },
   {
-    title: "AniFinder - Animal Classification App",
-    description:
-      "A mobile application for animal classification using Flutter and Machine Learning with CNN.",
-    startDate: "Apr 2021",
-    endDate: "May 2021",
-    highlights: [
-      "Designed and developed AniFinder, a mobile application for animal classification, using Flutter for a seamless user experience.",
-      "Enabled functionality for users (toddlers/kids) to upload or capture images directly through the application. Trained and integrated an ML model on a comprehensive animal dataset with an efficacy of 89.7%, ensuring accurate classification of animal species.",
-      "Implemented end-to-end workflows, including image preprocessing, CNN model training, and result display within the app. Optimized performance by integrating the trained CNN model directly into the Flutter application, ensuring efficient and real-time classification.",
-    ],
-    technologies: [
-      "Flutter",
-      "Machine Learning",
-      "Python",
-      "Supervised Learning",
-      "CNN",
-    ],
-    githubUrl: "https://github.com/DimitriBelikov/AniFinder",
+    title: "AgML VLM Data Pipeline",
+    category: "AI / ML",
+    period: "Apr 2026 – Present",
+    icon: "brain-circuit",
+    hasImage: true,
+    slotId: "proj-agml",
+    blurb: "Automated vision-language-model dataset ingestion and benchmarking for agricultural AI, at 600K+ sample scale on SLURM HPC infrastructure.",
+    stack: ["PyTorch", "HuggingFace", "vLLM", "PyArrow", "SLURM"],
+  },
+  {
+    title: "Oracle Banking (OBDX)",
+    category: "Full-Stack",
+    period: "Aug 2022 – Jun 2025",
+    icon: "landmark",
+    hasImage: false,
+    slotId: "proj-obdx",
+    blurb: "10+ core banking modules for a major European bank, plus DevOps automation and containerized delivery cutting deploy time 85%.",
+    stack: ["Spring Boot", "Java 8", "REST/SOAP", "Docker", "Jenkins"],
   },
 ];
 
-export const technicalSkills = {
-  languages: [
-    "Java",
-    "C++",
-    "Python",
-    "HTML/CSS",
-    "JavaScript",
-    "SQL",
-  ],
-  frameworks: [
-    "Spring Boot",
-    "React JS",
-    "Node JS",
-    "MERN Stack",
-    "FastAPI",
-    "Django",
-  ],
-  tools: [
-    "Bazel",
-    "Gradle",
-    "Maven",
-    "Docker",
-    "Jenkins",
-    "Microservices",
-    "SVN",
-    "NoSQL Databases",
-    "Git",
-    "Amazon Web Services (AWS)",
-  ],
-};
-
-// Leadership & Volunteering - currently empty, section hidden when empty
-export interface LeadershipItem {
-  title: string;
-  organization: string;
-  startDate: string;
-  endDate: string;
-  description: string;
-}
-
-export const leadership: LeadershipItem[] = [];
-
-// Awards & Achievements - currently empty, section hidden when empty
-export interface AwardItem {
-  title: string;
-  issuer: string;
-  date: string;
-  description: string;
-}
-
-export const awards: AwardItem[] = [];
-
-// Gallery - currently empty, section hidden when empty
 export interface GalleryItem {
-  src: string;
-  alt: string;
-  caption?: string;
+  id: string;
+  caption: string;
+  note: string;
 }
 
-export const gallery: GalleryItem[] = [];
-
-export const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Education", href: "#education" },
-  { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+export const gallery: GalleryItem[] = [
+  { id: "gallery-1", caption: "Caption one", note: "Where was this? Add a short note." },
+  { id: "gallery-2", caption: "Caption two", note: "A favourite moment." },
+  { id: "gallery-3", caption: "Caption three", note: "Add a short note." },
+  { id: "gallery-4", caption: "Caption four", note: "Travels & talks." },
+  { id: "gallery-5", caption: "Caption five", note: "The story here." },
 ];

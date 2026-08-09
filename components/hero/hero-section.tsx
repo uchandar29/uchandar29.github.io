@@ -1,105 +1,166 @@
-"use client";
-
 import Image from "next/image";
-import { Download, Github, Linkedin, BookOpen } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { AnimatedName } from "@/components/hero/animated-name";
-import { StatusBadge } from "@/components/hero/status-badge";
+import { Icon } from "@/components/icon/icon";
 import { personalInfo } from "@/lib/portfolio-data";
 
 export function HeroSection() {
   return (
-    <section
-      id="about"
-      className="relative flex min-h-screen items-center pt-20"
+    <header
+      id="home"
+      className="hero-grid"
+      style={{
+        maxWidth: 1200,
+        margin: "0 auto",
+        padding: "clamp(40px, 7vw, 96px) clamp(20px, 5vw, 72px) 70px",
+        display: "grid",
+        gridTemplateColumns: "1.05fr 0.95fr",
+        gap: 40,
+        alignItems: "center",
+      }}
     >
-      <div className="mx-auto w-full max-w-6xl px-6 py-12 md:py-20">
-        <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-5">
-          {/* Photo - shown first on mobile, second on desktop */}
-          <div className="flex justify-center lg:order-2 lg:col-span-2 lg:justify-end">
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-full bg-primary/10 blur-2xl" />
-              <div className="relative h-52 w-52 overflow-hidden rounded-full border-4 border-background shadow-2xl sm:h-72 sm:w-72 lg:h-80 lg:w-80">
-                <Image
-                  src={personalInfo.profileImage}
-                  alt={`Portrait of ${personalInfo.name}`}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
+      <div style={{ animation: "fadeUp 0.8s ease both" }}>
+        <div style={{ display: "inline-flex", alignItems: "center", gap: 9, marginBottom: 18 }}>
+          <span
+            style={{
+              width: 9,
+              height: 9,
+              borderRadius: "50%",
+              background: "#22c55e",
+              animation: "pulseDot 2s infinite",
+            }}
+          />
+          <span
+            style={{
+              fontSize: 14,
+              fontWeight: 500,
+              letterSpacing: 3,
+              textTransform: "uppercase",
+              color: "var(--muted)",
+            }}
+          >
+            {personalInfo.title}
+          </span>
+        </div>
+        <h1
+          style={{
+            fontWeight: 800,
+            fontSize: "clamp(40px, 6.5vw, 74px)",
+            lineHeight: 1.02,
+            letterSpacing: "-2px",
+            margin: "0 0 22px",
+            color: "var(--text)",
+          }}
+        >
+          Hello, I&apos;m
+          <br />
+          <span style={{ color: "var(--accent)" }}>{personalInfo.name}</span>
+        </h1>
+        <p
+          style={{
+            fontSize: 17,
+            lineHeight: 1.7,
+            color: "var(--muted)",
+            maxWidth: 500,
+            margin: "0 0 32px",
+          }}
+        >
+          {personalInfo.bio}
+        </p>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
+          <a
+            href="#contact"
+            className="btn-outline"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 10,
+              padding: "15px 30px",
+              borderRadius: 999,
+              fontSize: 15,
+              fontWeight: 600,
+              color: "var(--text)",
+              background: "transparent",
+              border: "1.5px solid var(--border)",
+            }}
+          >
+            Get in touch <Icon name="arrow-right" style={{ width: 17, height: 17 }} />
+          </a>
+          <a
+            href="#projects"
+            className="btn-fill"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 10,
+              padding: "15px 30px",
+              borderRadius: 999,
+              fontSize: 15,
+              fontWeight: 600,
+              color: "var(--accent-ink)",
+              background: "var(--accent)",
+            }}
+          >
+            View work
+          </a>
+        </div>
+      </div>
+      <div
+        className="hero-media"
+        style={{ display: "grid", placeItems: "center", animation: "fadeUp 1s ease both" }}
+      >
+        <div style={{ position: "relative", width: "min(420px, 82vw)", aspectRatio: "5/6" }}>
+          <div
+            style={{
+              position: "absolute",
+              inset: -22,
+              borderRadius: "50%",
+              border: "1.5px dashed var(--accent)",
+              opacity: 0.35,
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: -34,
+              right: 6,
+              color: "var(--accent)",
+              fontSize: 26,
+              opacity: 0.5,
+            }}
+          >
+            +
           </div>
-
-          {/* Bio - shown second on mobile, first on desktop */}
-          <div className="flex flex-col items-center gap-5 text-center lg:order-1 lg:col-span-3 lg:items-start lg:text-left">
-            <StatusBadge
-              graduationDate={personalInfo.graduationDate}
-              openToRelocation={personalInfo.openToRelocation}
+          <div
+            style={{
+              position: "absolute",
+              bottom: 30,
+              left: -30,
+              color: "var(--accent)",
+              fontSize: 20,
+              opacity: 0.5,
+            }}
+          >
+            +
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              borderRadius: 26,
+              overflow: "hidden",
+              boxShadow: "var(--shadow)",
+              background: "var(--surface-2)",
+            }}
+          >
+            <Image
+              src={personalInfo.profileImage}
+              alt={`Portrait of ${personalInfo.name}`}
+              fill
+              className="object-cover"
+              priority
             />
-
-            <AnimatedName name={personalInfo.name} />
-
-            <p className="text-base leading-relaxed text-muted-foreground md:text-lg max-w-2xl text-justify">
-              {personalInfo.bio}
-            </p>
-
-            <div className="flex flex-wrap items-center justify-center gap-3 pt-2 lg:justify-start">
-              <Button asChild size="lg" className="rounded-full gap-2">
-                <a href={personalInfo.resumeUrl} download>
-                  <Download className="h-4 w-4" />
-                  View Resume
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="h-11 w-11 rounded-full"
-                asChild
-              >
-                <a
-                  href={personalInfo.links.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                >
-                  <Github className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="h-11 w-11 rounded-full"
-                asChild
-              >
-                <a
-                  href={personalInfo.links.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="h-11 w-11 rounded-full"
-                asChild
-              >
-                <a
-                  href={personalInfo.links.medium}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Medium"
-                >
-                  <BookOpen className="h-5 w-5" />
-                </a>
-              </Button>
-            </div>
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 }

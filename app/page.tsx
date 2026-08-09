@@ -1,31 +1,31 @@
 import { Header } from "@/components/header/header";
 import { HeroSection } from "@/components/hero/hero-section";
+import { AboutSection } from "@/components/about/about-section";
 import { SkillsSection } from "@/components/skills/skills-section";
-import { EducationSection } from "@/components/education/education-section";
 import { ExperienceSection } from "@/components/experience/experience-section";
+import { EducationSection } from "@/components/education/education-section";
 import { ProjectsSection } from "@/components/projects/projects-section";
-import { LeadershipSection } from "@/components/leadership/leadership-section";
-import { AwardsSection } from "@/components/awards/awards-section";
 import { GallerySection } from "@/components/gallery/gallery-section";
 import { ContactSection } from "@/components/contact/contact-section";
 import { Footer } from "@/components/footer/footer";
-import { ScrollToTop } from "@/components/scroll-to-top/scroll-to-top";
+import { ParticleBackground } from "@/components/particle-background/particle-background";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
-      <Header />
-      <HeroSection />
-      <EducationSection />
-      <ExperienceSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <LeadershipSection />
-      <AwardsSection />
-      <GallerySection />
-      <ContactSection />
-      <Footer />
-      <ScrollToTop />
-    </main>
+    <div style={{ position: "relative", minHeight: "100vh" }}>
+      <ParticleBackground />
+      <main style={{ position: "relative", zIndex: 1 }}>
+        <Header />
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <EducationSection />
+        <ProjectsSection />
+        <GallerySection />
+        <ContactSection />
+        <Footer />
+      </main>
+    </div>
   );
 }

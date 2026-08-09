@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, JetBrains_Mono } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
@@ -7,11 +7,13 @@ import './globals.css'
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
+  weight: ['300', '400', '500', '600', '700'],
 })
 
-const jetbrainsMono = JetBrains_Mono({
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-jetbrains-mono',
+  variable: '--font-poppins',
+  weight: ['400', '500', '600', '700', '800'],
 })
 
 export const metadata: Metadata = {
@@ -48,8 +50,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f0f1f8' },
-    { media: '(prefers-color-scheme: dark)', color: '#1a1b2e' },
+    { media: '(prefers-color-scheme: light)', color: '#eef0f2' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0b0c' },
   ],
   width: 'device-width',
   initialScale: 1,
@@ -61,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"

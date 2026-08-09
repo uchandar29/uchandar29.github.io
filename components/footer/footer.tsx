@@ -1,58 +1,47 @@
-import { Github, Linkedin, BookOpen, Heart } from "lucide-react";
+import { Icon } from "@/components/icon/icon";
 import { personalInfo } from "@/lib/portfolio-data";
 
-function FooterLink({
-  href,
-  label,
-  icon: Icon,
-}: {
-  href: string;
-  label: string;
-  icon: React.ComponentType<{ className?: string }>;
-}) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
-      aria-label={label}
-    >
-      <Icon className="h-4 w-4" />
-      <span>{label}</span>
-    </a>
-  );
-}
+const iconLinkStyle: React.CSSProperties = {
+  display: "grid",
+  placeItems: "center",
+  width: 42,
+  height: 42,
+  borderRadius: 12,
+  background: "var(--surface-2)",
+  border: "1px solid var(--border)",
+  color: "var(--text)",
+};
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 py-8 sm:flex-row sm:justify-between">
-        <div className="flex items-center gap-6">
-          <FooterLink
-            href={personalInfo.links.github}
-            label="GitHub"
-            icon={Github}
-          />
-          <FooterLink
-            href={personalInfo.links.linkedin}
-            label="LinkedIn"
-            icon={Linkedin}
-          />
-          <FooterLink
-            href={personalInfo.links.medium}
-            label="Medium"
-            icon={BookOpen}
-          />
+    <footer style={{ borderTop: "1px solid var(--border)", padding: "32px clamp(20px, 5vw, 72px)" }}>
+      <div
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 18,
+        }}
+      >
+        <div style={{ fontSize: 14, color: "var(--muted)" }}>© 2026 Urmil Jatin Chandarana</div>
+        <div style={{ display: "flex", gap: 10 }}>
+          <a href={personalInfo.links.github} target="_blank" rel="noopener noreferrer" className="icon-btn" style={iconLinkStyle} aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5Z" />
+            </svg>
+          </a>
+          <a href={personalInfo.links.linkedin} target="_blank" rel="noopener noreferrer" className="icon-btn" style={iconLinkStyle} aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+            </svg>
+          </a>
+          <a href={personalInfo.resumeUrl} download className="icon-btn" style={iconLinkStyle} aria-label="Download resume">
+            <Icon name="download" style={{ width: 18, height: 18 }} />
+          </a>
         </div>
-
-        <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
-          Made with{" "}
-          <Heart className="h-3.5 w-3.5 fill-red-500 text-red-500" /> by{" "}
-          <span className="font-medium text-foreground">
-            Urmil Chandarana
-          </span>
-        </p>
       </div>
     </footer>
   );
