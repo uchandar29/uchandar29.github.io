@@ -82,7 +82,18 @@ export function ProjectsSection() {
                 {p.category}
               </span>
             </div>
-            <h3 style={{ fontSize: 19, fontWeight: 600, margin: "0 0 4px", color: "var(--text)" }}>{p.title}</h3>
+            <h3
+              style={{
+                fontSize: 19,
+                fontWeight: 600,
+                lineHeight: 1.3,
+                minHeight: 50,
+                margin: "0 0 4px",
+                color: "var(--text)",
+              }}
+            >
+              {p.title}
+            </h3>
             <div style={{ fontSize: 12.5, color: "var(--muted)", marginBottom: 12 }}>{p.period}</div>
             <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--muted)", margin: "0 0 18px", flex: 1 }}>
               {p.blurb}
