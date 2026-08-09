@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Icon } from "@/components/icon/icon";
 import { gallery } from "@/lib/portfolio-data";
 
@@ -92,19 +93,31 @@ export function GallerySection() {
                     boxShadow: "var(--shadow)",
                   }}
                 >
-                  <div
-                    style={{
-                      aspectRatio: "3/4",
-                      background: "var(--bg)",
-                      display: "grid",
-                      placeItems: "center",
-                      gap: 8,
-                      color: "var(--muted)",
-                    }}
-                  >
-                    <Icon name="image-plus" style={{ width: 30, height: 30, opacity: 0.4 }} />
-                    <span style={{ fontSize: 12.5 }}>Add a photo</span>
-                  </div>
+                  {item.image ? (
+                    <div style={{ position: "relative", aspectRatio: "3/4", background: "var(--bg)" }}>
+                      <Image
+                        src={item.image}
+                        alt={item.caption}
+                        fill
+                        sizes="(max-width: 640px) 86vw, 340px"
+                        style={{ objectFit: "cover" }}
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      style={{
+                        aspectRatio: "3/4",
+                        background: "var(--bg)",
+                        display: "grid",
+                        placeItems: "center",
+                        gap: 8,
+                        color: "var(--muted)",
+                      }}
+                    >
+                      <Icon name="image-plus" style={{ width: 30, height: 30, opacity: 0.4 }} />
+                      <span style={{ fontSize: 12.5 }}>Add a photo</span>
+                    </div>
+                  )}
                   <div style={{ padding: "15px 18px" }}>
                     <div style={{ fontSize: 15, fontWeight: 600, color: "var(--text)", marginBottom: 2 }}>
                       {item.caption}

@@ -1,238 +1,288 @@
 export const personalInfo = {
-  name: "Urmil Chandarana",
-  firstName: "Urmil Jatin",
-  lastName: "Chandarana",
-  fullName: "Urmil Jatin Chandarana",
-  title: "Software Development Engineer",
-  location: "Davis, California",
-  phone: "+1 530-760-6834",
-  phoneHref: "+15307606834",
-  email: "urmilchandarana@gmail.com",
-  bio: "I build resilient systems end to end — from core banking modules at Oracle to large-scale ML data pipelines and a community-first delivery platform. Currently a CS master's student at UC Davis, based in Davis, California.",
-  links: {
-    github: "https://github.com/uchandar29",
-    githubHandle: "github.com/uchandar29",
-    linkedin: "https://linkedin.com/in/urmilchandarana",
-    linkedinHandle: "in/urmilchandarana",
-    medium: "https://medium.com/@urmilchandarana",
-    mediumHandle: "medium.com/@urmilchandarana",
-  },
-  resumeUrl: "/Resume_Urmil Jatin Chandarana.pdf",
-  profileImage: "/images/profile.jpg",
+    name: "Urmil Chandarana",
+    firstName: "Urmil Jatin",
+    lastName: "Chandarana",
+    fullName: "Urmil Jatin Chandarana",
+    title: "Software Development Engineer",
+    location: "Davis, California",
+    phone: "+1 530-760-6834",
+    phoneHref: "+15307606834",
+    email: "urmilchandarana@gmail.com",
+    bio: "I build resilient systems end to end — from core banking modules at Oracle to large-scale ML data pipelines and a community-first delivery platform. Currently a CS master's student at UC Davis, based in Davis, California.",
+    links: {
+        github: "https://github.com/uchandar29",
+        githubHandle: "github.com/uchandar29",
+        linkedin: "https://linkedin.com/in/urmilchandarana",
+        linkedinHandle: "in/urmilchandarana",
+        medium: "https://medium.com/@urmilchandarana",
+        mediumHandle: "medium.com/@urmilchandarana",
+    },
+    resumeUrl: "/Resume_Urmil Jatin Chandarana.pdf",
+    profileImage: "/images/profile.jpeg",
 };
 
 export const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#projects" },
+    { label: "Gallery", href: "#gallery" },
+    { label: "Contact", href: "#contact" },
 ];
 
 export interface Highlight {
-  icon: string;
-  value: string;
-  label: string;
+    icon: string;
+    value: string;
+    label: string;
 }
 
 export const highlights: Highlight[] = [
-  { icon: "map-pin", value: "Davis, CA", label: "Based in California" },
-  { icon: "briefcase", value: "3+ yrs", label: "Shipping production software" },
-  { icon: "graduation-cap", value: "4.0 GPA", label: "MS Computer Science · UC Davis" },
-  { icon: "database", value: "600K+", label: "Samples processed on HPC" },
+    {
+        icon: "map-pin",
+        value: "Davis, California",
+        label: "In close proximity from San Francisco",
+    },
+    {
+        icon: "briefcase",
+        value: "3+ yrs",
+        label: "Shipping production software",
+    },
+    {
+        icon: "graduation-cap",
+        value: "4.0 GPA",
+        label: "MS Computer Science · UC Davis",
+    },
 ];
 
 export interface SkillItem {
-  name: string;
-  icon: string;
+    name: string;
+    icon: string;
 }
 
 export interface SkillGroup {
-  title: string;
-  icon: string;
-  items: SkillItem[];
+    title: string;
+    icon: string;
+    items: SkillItem[];
 }
 
 export const skillGroups: SkillGroup[] = [
-  {
-    title: "Programming Languages",
-    icon: "code-2",
-    items: [
-      { name: "Java", icon: "coffee" },
-      { name: "C++", icon: "braces" },
-      { name: "JavaScript", icon: "file-code" },
-      { name: "Python", icon: "code" },
-      { name: "SQL", icon: "database" },
-      { name: "TypeScript", icon: "file-code-2" },
-      { name: "HTML", icon: "code-xml" },
-    ],
-  },
-  {
-    title: "Libraries & Frameworks",
-    icon: "boxes",
-    items: [
-      { name: "Spring Boot", icon: "leaf" },
-      { name: "Node.js", icon: "hexagon" },
-      { name: "Django", icon: "server" },
-      { name: "FastAPI", icon: "zap" },
-      { name: "Flutter", icon: "smartphone" },
-      { name: "Next.js", icon: "panels-top-left" },
-      { name: "React.js", icon: "atom" },
-      { name: "Tailwind CSS", icon: "wind" },
-    ],
-  },
-  {
-    title: "ML / Data",
-    icon: "brain-circuit",
-    items: [
-      { name: "PyTorch", icon: "flame" },
-      { name: "HuggingFace", icon: "smile" },
-      { name: "PyArrow", icon: "feather" },
-      { name: "Ollama", icon: "bot" },
-      { name: "vLLM", icon: "cpu" },
-      { name: "Model Quantization", icon: "scaling" },
-      { name: "Scikit-learn", icon: "scatter-chart" },
-    ],
-  },
-  {
-    title: "Tools / Cloud",
-    icon: "wrench",
-    items: [
-      { name: "Docker", icon: "container" },
-      { name: "Kubernetes", icon: "ship-wheel" },
-      { name: "AWS", icon: "cloud" },
-      { name: "Oracle Cloud", icon: "cloud-cog" },
-      { name: "Redis", icon: "layers" },
-      { name: "MongoDB", icon: "leaf" },
-      { name: "DynamoDB", icon: "database" },
-      { name: "Git", icon: "git-branch" },
-      { name: "GitHub Actions", icon: "git-merge" },
-      { name: "Bazel", icon: "box" },
-    ],
-  },
-  {
-    title: "AI Coding Tools",
-    icon: "sparkles",
-    items: [
-      { name: "Claude Code", icon: "terminal" },
-      { name: "Cursor", icon: "mouse-pointer-2" },
-    ],
-  },
+    {
+        title: "Programming Languages",
+        icon: "code-2",
+        items: [
+            { name: "Java", icon: "coffee" },
+            { name: "C++", icon: "braces" },
+            { name: "JavaScript", icon: "file-code" },
+            { name: "Python", icon: "code" },
+            { name: "SQL", icon: "database" },
+            { name: "HTML", icon: "code-xml" },
+        ],
+    },
+    {
+        title: "Libraries & Frameworks",
+        icon: "boxes",
+        items: [
+            { name: "Spring Boot", icon: "leaf" },
+            { name: "Node.js", icon: "hexagon" },
+            { name: "Django", icon: "server" },
+            { name: "FastAPI", icon: "zap" },
+            { name: "Next.js", icon: "panels-top-left" },
+            { name: "React.js", icon: "atom" },
+            { name: "Tailwind CSS", icon: "wind" },
+        ],
+    },
+    {
+        title: "ML / Data",
+        icon: "brain-circuit",
+        items: [
+            { name: "PyTorch", icon: "flame" },
+            { name: "HuggingFace", icon: "smile" },
+            { name: "PyArrow", icon: "feather" },
+            { name: "Ollama", icon: "bot" },
+            { name: "vLLM", icon: "cpu" },
+            { name: "Model Quantization", icon: "scaling" },
+            { name: "Scikit-learn", icon: "scatter-chart" },
+        ],
+    },
+    {
+        title: "Tools / Cloud",
+        icon: "wrench",
+        items: [
+            { name: "Docker", icon: "container" },
+            { name: "Kubernetes", icon: "ship-wheel" },
+            { name: "AWS", icon: "cloud" },
+            { name: "Redis", icon: "layers" },
+            { name: "MongoDB", icon: "leaf" },
+            { name: "Git", icon: "git-branch" },
+            { name: "GitHub Actions", icon: "git-merge" },
+            { name: "Bazel", icon: "box" },
+        ],
+    },
+    {
+        title: "AI Coding Tools",
+        icon: "sparkles",
+        items: [
+            { name: "Claude Code", icon: "terminal" },
+            { name: "Cursor", icon: "mouse-pointer-2" },
+        ],
+    },
 ];
 
 export interface Experience {
-  date: string;
-  place: string;
-  role: string;
-  org: string;
-  points: string[];
+    date: string;
+    place: string;
+    role: string;
+    org: string;
+    points: string[];
 }
 
 export const experiences: Experience[] = [
-  {
-    date: "Apr 2026 – Present",
-    place: "Davis, CA",
-    role: "Graduate Student Researcher",
-    org: "PAIBL Lab · Project AgML, UC Davis",
-    points: [
-      "Built an automated VLM dataset ingestion pipeline that analyzes raw datasets, generates schema mappings, and converts outputs to Parquet for direct HuggingFace upload.",
-      "Developed a benchmarking framework across structural quality, difficulty, diversity, and annotation reliability, producing a leaderboard for benchmark selection.",
-      "Engineered large-scale (600K+ sample) processing on SLURM-managed HPC, resolving PyArrow/HuggingFace pipeline bottlenecks.",
-    ],
-  },
-  {
-    date: "Aug 2022 – Jun 2025",
-    place: "Pune, India",
-    role: "Associate Consultant · Software Development Engineer",
-    org: "Oracle Financial Services Software",
-    points: [
-      "Engineered 10+ core banking modules on the OBDX platform using Spring Boot, Java 8, REST/SOAP APIs and microservices for a major European bank.",
-      "Orchestrated migration to a containerized CI/CD environment with Docker, cutting setup and deployment time by 85% with 100% environment parity.",
-      "Led 7 product patch-set upgrades and served as technical single point-of-contact for client stakeholders.",
-    ],
-  },
+    {
+        date: "Apr 2026 – Present",
+        place: "Davis, California",
+        role: "Graduate Student Researcher",
+        org: "PAIBL Lab · Project AgML, UC Davis · Advisor: Prof. Mason Earles",
+        points: [
+            "Designed and built an automated VLM dataset ingestion pipeline leveraging an open-source reasoning model that analyzes raw datasets, generates schema mappings, and convert outputs to Parquet format for direct upload to HuggingFace.",
+            "Developed a dataset benchmarking framework across structural quality, content difficulty, diversity, and annotation reliability, producing a leaderboard to guide selection of future agricultural VLM benchmark datasets",
+            "Building a prompt-translation module combining work on OFAT and combinatorial search over an LLM/VLM to auto-generate optimal per-dataset, per-model prompts, improving zero-shot object detection accuracy for agricultural VLMs",
+			"Collaborating with dataset authors to formalize data-sharing agreements and integrate external agricultural datasets into the AgML ecosystem"
+        ],
+    },
+    {
+        date: "Aug 2022 – Jun 2025",
+        place: "Pune, India",
+        role: "Associate Consultant · Software Development Engineer",
+        org: "Oracle Financial Services Software",
+        points: [
+            "Engineered 10+ core banking modules for the Oracle Banking Digital Experience (OBDX) platform, using Spring Boot, Java 8, REST APIs/SOAP APIs & Microservices for a major European Bank",
+            "Streamlined DevOps pipelines, reducing manual intervention by 30% using tools including Jenkins & Gradle and implemented automation guidelines to enhance team efficiency",
+            "Orchestrated the migration from a frequent traditional application setup to a containerized environment using CI/CD pipelines & Docker, reducing environment setup and deployment time by 85% while achieving 100% environment parity across SDLC stages",
+			"Led 7 product patch set upgrades, ensuring meticulous planning and error-free execution and acted as a technical SPC (Single point-of-contact) for client stakeholders",
+			"Spearheaded the development and delivery of critical modules, including a Login system via CAS & Bill Payment Functionality, ensuring seamless integration under tight deadlines alongside collaborating with clients."
+        ],
+    },
+	{
+        date: "Apr 2021 – Jul 2021",
+        place: "Mumbai, India",
+        role: "Jr. Technology Developer",
+        org: "ALOYT - THE TECHNOLOGY COMPANY",
+        points: [
+            "Architected and deployed a cross-platform mobile application using Flutter and Django, enabling real-time speech-to-speech translation for regional Indian dialects to bridge communication gaps for local farmers.",
+			"Engineered a low-latency Python-based translation pipeline on the backend, integrating advanced speech-processing modules to handle complex linguistic nuances with 92% translation accuracy",
+			"Optimized end-to-end latency by 40% through the implementation of asynchronous processing and efficient data streaming between the Flutter frontend and Django backend, ensuring a seamless walkie-talkie user experience",
+			"Designed a scalable API infrastructure to manage concurrent audio streams, utilizing optimized request-handling to maintain system stability during peak usage hours."
+        ],
+    },
+	{
+        date: "Jan 2021 – Mar 2021",
+        place: "Mumbai, India",
+        role: "Python Intern",
+        org: "Swabhav Techlabs",
+        points: [
+            "Acquired a solid foundation in Python, Django, Flask and Git, applying these technologies to an application development project.",
+			"Successfully developed a Django application as part of a team project, demonstrating hands-on expertise in full-stack development using MySQL and API Development."
+        ],
+    },
+	{
+        date: "May 2020 – Jun 2020",
+        place: "Mumbai, India",
+        role: "Student Research Intern",
+        org: "KJ Somaiya College of Engineering · Advisor: Prof. Pradnya Gotmare",
+        points: [
+            "Conducted in-depth research on advanced data extraction techniques, applying them to train neural models for Natural Language Processing (NLP) tasks under guidance of Prof. Pradnya Gotmare.",
+			"Research aimed at implementing a neural model to extract answers to questions based on given prose. Reviewed various technical papers to get insights into different NLP methodologies."
+        ],
+    },
 ];
 
 export interface Education {
-  degree: string;
-  school: string;
-  date: string;
-  gpa: string;
-  detail: string;
+    degree: string;
+    school: string;
+    date: string;
+    gpa: string;
+    detail: string;
 }
 
 export const education: Education[] = [
-  {
-    degree: "M.S. Computer Science",
-    school: "University of California, Davis",
-    date: "Sep 2025 – Present",
-    gpa: "GPA 4.0",
-    detail: "Distributed Database Systems, Computer & Information Security, Computer Networks, Visual Analytics.",
-  },
-  {
-    degree: "B.Tech Computer Engineering",
-    school: "K.J. Somaiya College of Engineering, Mumbai",
-    date: "Aug 2018 – Jun 2022",
-    gpa: "GPA 9.4",
-    detail: "Advanced Algorithms, Operating Systems, Full-Stack Development, Blockchain, Cloud Computing.",
-  },
+    {
+        degree: "Master of Science, Computer Science",
+        school: "University of California - Davis",
+        date: "Sep 2025 – Present",
+        gpa: "GPA 4.0",
+        detail: "ECS 265: Distributed Database Systems; ECS 235A: Computer & Information Security; ECS 252: Computer Networks; ECS 273: Visual Analytics.",
+    },
+    {
+        degree: "Bachelor of Technology, Computer Engineering",
+        school: "K.J. Somaiya College of Engineering",
+        date: "Aug 2018 – Jun 2022",
+        gpa: "GPA 9.4",
+        detail: "Advanced Algorithms: Design and Analysis; Relational Database Management Systems; Operating System and System Software; Computer Network; Full-Stack Development Lab; Blockchain; Cloud Computing.",
+    },
 ];
 
 export interface Project {
-  title: string;
-  category: string;
-  period: string;
-  icon: string;
-  hasImage: boolean;
-  slotId: string;
-  blurb: string;
-  stack: string[];
+    title: string;
+    category: string;
+    period: string;
+    icon: string;
+    hasImage: boolean;
+    slotId: string;
+    blurb: string;
+    stack: string[];
 }
 
 export const featured: Project[] = [
-  {
-    title: "Localbite",
-    category: "Full-Stack",
-    period: "Feb 2026 – Present",
-    icon: "utensils-crossed",
-    hasImage: true,
-    slotId: "proj-localbite",
-    blurb: "A community-first food-delivery platform cutting restaurant commissions from 30% to 8–12%, with a Redis + WebSocket phased dispatch engine and Stripe multi-party settlement.",
-    stack: ["FastAPI", "Next.js", "Redis", "Kafka", "WebSocket", "Stripe"],
-  },
-  {
-    title: "AgML VLM Data Pipeline",
-    category: "AI / ML",
-    period: "Apr 2026 – Present",
-    icon: "brain-circuit",
-    hasImage: true,
-    slotId: "proj-agml",
-    blurb: "Automated vision-language-model dataset ingestion and benchmarking for agricultural AI, at 600K+ sample scale on SLURM HPC infrastructure.",
-    stack: ["PyTorch", "HuggingFace", "vLLM", "PyArrow", "SLURM"],
-  },
-  {
-    title: "Oracle Banking (OBDX)",
-    category: "Full-Stack",
-    period: "Aug 2022 – Jun 2025",
-    icon: "landmark",
-    hasImage: false,
-    slotId: "proj-obdx",
-    blurb: "10+ core banking modules for a major European bank, plus DevOps automation and containerized delivery cutting deploy time 85%.",
-    stack: ["Spring Boot", "Java 8", "REST/SOAP", "Docker", "Jenkins"],
-  },
+    {
+        title: "AgML Benchmarking",
+        category: "AI / ML",
+        period: "June 2026 – Present",
+        icon: "wheat",
+        hasImage: false,
+        slotId: "proj-agml-benchmarking",
+        blurb: "A benchmarking pipeline for computer vision datasets on HuggingFace. Evaluates dataset quality across structural, embedding-based, and diversity metrics — with UMAP visualizations of the embedding space. Designed to be task-agnostic, supporting image classification, object detection, segmentation, and VLM datasets. Built for reproducible evaluation with SLURM support for GPU clusters.",
+        stack: ["Python", "HuggingFace", "DINOv2", "FAISS", "UMAP", "scikit-learn", "PyTorch", "SLURM" ],
+    },
+    {
+        title: "Lily",
+        category: "AI / ML",
+        period: "May 2026 – Present",
+        icon: "heart-handshake",
+        hasImage: false,
+        slotId: "proj-lily-hackathon",
+        blurb: "A voice-first, AI-powered maternal health triage system designed to provide accessible prenatal and postpartum guidance, clinical screening, and doctor escalation via standard phone calls in maternal healthcare deserts.",
+        stack: ["Python", "React.js", "PostgreSQL", "Tailwind CSS", "Claude", "ChromaDB", "PineconeDB", "Twilio", "Eleven Labs", "OpenBioLLM", "SLURM"],
+    },
+    {
+        title: "Smart CrowdFunding Using Blockchain",
+        category: "Blockchain",
+        period: "Oct 2021 – Nov 2022",
+        icon: "hand-coins",
+        hasImage: false,
+        slotId: "proj-smart-crowdfunding",
+        blurb: "We have developed a Smart Crowdfunding application based on Blockchain technology i.e. a decentralized application that replaces a middle-man (like a Bank or a human) with a smart block of code ,or so we call it a smart contract, that handles all the functioning related to the donations. A smart contract helps to block the funds within the Blockchain until the campaign contributors agrees to release them to the organizing entity.",
+        stack: ["Node.js", "React.js", "Bootstrap 5", "MongoDB", "Blockchain", "Ethereum", "Ganache", "Solidity", "Web3.js", "Metamask"],
+    },
 ];
 
 export interface GalleryItem {
-  id: string;
-  caption: string;
-  note: string;
+    id: string;
+    caption: string;
+    note: string;
+    // Path to the photo, e.g. "/images/gallery/campus.jpg". Drop the file in
+    // public/images/gallery/ and set this field to show it instead of the
+    // placeholder. Leave unset to keep the "Add a photo" placeholder.
+    image?: string;
 }
 
 export const gallery: GalleryItem[] = [
-  { id: "gallery-1", caption: "Caption one", note: "Where was this? Add a short note." },
-  { id: "gallery-2", caption: "Caption two", note: "A favourite moment." },
-  { id: "gallery-3", caption: "Caption three", note: "Add a short note." },
-  { id: "gallery-4", caption: "Caption four", note: "Travels & talks." },
-  { id: "gallery-5", caption: "Caption five", note: "The story here." },
+    {
+        id: "gallery-1",
+        caption: "Caption one",
+        note: "Where was this? Add a short note.",
+    },
+    { id: "gallery-2", caption: "Caption two", note: "A favourite moment." },
+    { id: "gallery-3", caption: "Caption three", note: "Add a short note." },
+    { id: "gallery-4", caption: "Caption four", note: "Travels & talks." },
+    { id: "gallery-5", caption: "Caption five", note: "The story here." },
 ];

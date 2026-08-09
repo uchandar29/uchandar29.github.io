@@ -17,6 +17,7 @@ export function EducationSection() {
         {education.map((ed) => (
           <div
             key={ed.degree}
+            className="card-highlight"
             style={{
               padding: 28,
               borderRadius: 18,
