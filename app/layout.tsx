@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
-import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const inter = Inter({
@@ -73,7 +72,6 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   )
