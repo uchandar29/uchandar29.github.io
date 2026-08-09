@@ -53,7 +53,7 @@ export function ExperienceSection() {
                 style={{
                   display: "flex",
                   flexWrap: "wrap",
-                  alignItems: "flex-start",
+                  alignItems: "center",
                   justifyContent: "space-between",
                   gap: 10,
                   marginBottom: 12,
@@ -72,35 +72,44 @@ export function ExperienceSection() {
                 >
                   {e.date}
                 </span>
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 6 }}>
-                  <span
-                    style={{
-                      fontSize: 12.5,
-                      fontWeight: 600,
-                      padding: "5px 11px",
-                      borderRadius: 999,
-                      background: "var(--surface-2)",
-                      color: "var(--muted)",
-                      border: "1px solid var(--border)",
-                    }}
-                  >
-                    {e.type}
-                  </span>
-                  <span
-                    style={{
-                      fontSize: 13.5,
-                      color: "var(--muted)",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 6,
-                    }}
-                  >
-                    <Icon name="map-pin" style={{ width: 14, height: 14 }} />
-                    {e.place}
-                  </span>
-                </div>
+                <span
+                  style={{
+                    fontSize: 12.5,
+                    fontWeight: 600,
+                    padding: "5px 11px",
+                    borderRadius: 999,
+                    background: "var(--surface-2)",
+                    color: "var(--muted)",
+                    border: "1px solid var(--border)",
+                  }}
+                >
+                  {e.type}
+                </span>
               </div>
-              <h3 style={{ fontSize: 20, fontWeight: 600, margin: "0 0 3px", color: "var(--text)" }}>{e.role}</h3>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: 10,
+                  marginBottom: 3,
+                }}
+              >
+                <h3 style={{ fontSize: 20, fontWeight: 600, margin: 0, color: "var(--text)" }}>{e.role}</h3>
+                <span
+                  style={{
+                    fontSize: 13.5,
+                    color: "var(--muted)",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 6,
+                  }}
+                >
+                  <Icon name="map-pin" style={{ width: 14, height: 14 }} />
+                  {e.place}
+                </span>
+              </div>
               <div style={{ fontSize: 15, color: "var(--accent)", fontWeight: 500, marginBottom: 14 }}>{e.org}</div>
               <ul style={{ margin: 0, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 9 }}>
                 {e.points.map((p) => (
