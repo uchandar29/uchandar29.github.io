@@ -13,11 +13,11 @@ export function ExperienceSection() {
           Experience
         </h2>
       </div>
-      <div style={{ position: "relative", paddingLeft: 38 }}>
+      <div style={{ position: "relative", paddingLeft: 56 }}>
         <div
           style={{
             position: "absolute",
-            left: 9,
+            left: 10,
             top: 10,
             bottom: 10,
             width: 2,
@@ -29,7 +29,7 @@ export function ExperienceSection() {
             <span
               style={{
                 position: "absolute",
-                left: -34,
+                left: -53,
                 top: 28,
                 width: 16,
                 height: 16,
@@ -49,33 +49,29 @@ export function ExperienceSection() {
                 boxShadow: "var(--shadow)",
               }}
             >
-              <span
-                style={{
-                  display: "inline-block",
-                  fontSize: 12.5,
-                  fontWeight: 700,
-                  letterSpacing: "0.5px",
-                  padding: "5px 11px",
-                  borderRadius: 999,
-                  background: "var(--accent-weak)",
-                  color: "var(--accent)",
-                  marginBottom: 12,
-                }}
-              >
-                {e.date}
-              </span>
-              <h3 style={{ fontSize: 20, fontWeight: 600, margin: "0 0 6px", color: "var(--text)" }}>{e.role}</h3>
               <div
                 style={{
                   display: "flex",
                   flexWrap: "wrap",
                   alignItems: "center",
-                  columnGap: 12,
-                  rowGap: 4,
-                  marginBottom: 14,
+                  justifyContent: "space-between",
+                  gap: 10,
+                  marginBottom: 12,
                 }}
               >
-                <span style={{ fontSize: 15, color: "var(--accent)", fontWeight: 500 }}>{e.org}</span>
+                <span
+                  style={{
+                    fontSize: 12.5,
+                    fontWeight: 700,
+                    letterSpacing: "0.5px",
+                    padding: "5px 11px",
+                    borderRadius: 999,
+                    background: "var(--accent-weak)",
+                    color: "var(--accent)",
+                  }}
+                >
+                  {e.date}
+                </span>
                 <span
                   style={{
                     fontSize: 13.5,
@@ -89,6 +85,8 @@ export function ExperienceSection() {
                   {e.place}
                 </span>
               </div>
+              <h3 style={{ fontSize: 20, fontWeight: 600, margin: "0 0 3px", color: "var(--text)" }}>{e.role}</h3>
+              <div style={{ fontSize: 15, color: "var(--accent)", fontWeight: 500, marginBottom: 14 }}>{e.org}</div>
               <ul style={{ margin: 0, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 9 }}>
                 {e.points.map((p) => (
                   <li key={p} style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--muted)" }}>

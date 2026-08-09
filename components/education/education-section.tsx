@@ -33,9 +33,12 @@ export function EducationSection() {
                 alignItems: "flex-start",
                 gap: 14,
                 marginBottom: 10,
+                minHeight: 52,
               }}
             >
-              <h3 style={{ fontSize: 19, fontWeight: 600, margin: 0, color: "var(--text)" }}>{ed.degree}</h3>
+              <h3 style={{ fontSize: 19, fontWeight: 600, lineHeight: 1.3, margin: 0, color: "var(--text)" }}>
+                {ed.degree}
+              </h3>
               <span
                 style={{
                   fontSize: 13,
