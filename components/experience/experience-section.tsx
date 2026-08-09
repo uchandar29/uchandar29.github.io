@@ -59,19 +59,34 @@ export function ExperienceSection() {
                   marginBottom: 12,
                 }}
               >
-                <span
-                  style={{
-                    fontSize: 12.5,
-                    fontWeight: 700,
-                    letterSpacing: "0.5px",
-                    padding: "5px 11px",
-                    borderRadius: 999,
-                    background: "var(--accent-weak)",
-                    color: "var(--accent)",
-                  }}
-                >
-                  {e.date}
-                </span>
+                <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 8 }}>
+                  <span
+                    style={{
+                      fontSize: 12.5,
+                      fontWeight: 700,
+                      letterSpacing: "0.5px",
+                      padding: "5px 11px",
+                      borderRadius: 999,
+                      background: "var(--accent-weak)",
+                      color: "var(--accent)",
+                    }}
+                  >
+                    {e.date}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: 12.5,
+                      fontWeight: 600,
+                      padding: "5px 11px",
+                      borderRadius: 999,
+                      background: "var(--surface-2)",
+                      color: "var(--muted)",
+                      border: "1px solid var(--border)",
+                    }}
+                  >
+                    {e.type}
+                  </span>
+                </div>
                 <span
                   style={{
                     fontSize: 13.5,

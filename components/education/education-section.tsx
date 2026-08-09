@@ -54,8 +54,35 @@ export function EducationSection() {
               </span>
             </div>
             <div style={{ fontSize: 15, color: "var(--accent)", fontWeight: 500, marginBottom: 4 }}>{ed.school}</div>
-            <div style={{ fontSize: 13.5, color: "var(--muted)", marginBottom: 14 }}>{ed.date}</div>
-            <p style={{ fontSize: 14, lineHeight: 1.6, color: "var(--muted)", margin: 0 }}>{ed.detail}</p>
+            <div style={{ fontSize: 13.5, color: "var(--muted)", marginBottom: 16 }}>{ed.date}</div>
+            <div
+              style={{
+                fontSize: 12,
+                fontWeight: 700,
+                letterSpacing: "0.5px",
+                textTransform: "uppercase",
+                color: "var(--muted)",
+                marginBottom: 10,
+              }}
+            >
+              Relevant Coursework
+            </div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+              {ed.coursework.map((course) => (
+                <span
+                  key={course}
+                  style={{
+                    fontSize: 12.5,
+                    padding: "6px 12px",
+                    borderRadius: 8,
+                    background: "var(--surface-2)",
+                    color: "var(--text)",
+                  }}
+                >
+                  {course}
+                </span>
+              ))}
+            </div>
           </div>
         ))}
       </div>

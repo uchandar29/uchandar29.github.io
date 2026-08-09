@@ -133,6 +133,7 @@ export interface Experience {
     place: string;
     role: string;
     org: string;
+    type: "Full-Time" | "Part-Time" | "Internship" | "Contract";
     points: string[];
 }
 
@@ -142,6 +143,7 @@ export const experiences: Experience[] = [
         place: "Davis, California",
         role: "Graduate Student Researcher",
         org: "PAIBL Lab · Project AgML, UC Davis · Advisor: Prof. Mason Earles",
+        type: "Part-Time",
         points: [
             "Designed and built an automated VLM dataset ingestion pipeline leveraging an open-source reasoning model that analyzes raw datasets, generates schema mappings, and convert outputs to Parquet format for direct upload to HuggingFace.",
             "Developed a dataset benchmarking framework across structural quality, content difficulty, diversity, and annotation reliability, producing a leaderboard to guide selection of future agricultural VLM benchmark datasets",
@@ -154,6 +156,7 @@ export const experiences: Experience[] = [
         place: "Pune, India",
         role: "Associate Consultant · Software Development Engineer",
         org: "Oracle Financial Services Software",
+        type: "Full-Time",
         points: [
             "Engineered 10+ core banking modules for the Oracle Banking Digital Experience (OBDX) platform, using Spring Boot, Java 8, REST APIs/SOAP APIs & Microservices for a major European Bank",
             "Streamlined DevOps pipelines, reducing manual intervention by 30% using tools including Jenkins & Gradle and implemented automation guidelines to enhance team efficiency",
@@ -167,6 +170,7 @@ export const experiences: Experience[] = [
         place: "Mumbai, India",
         role: "Jr. Technology Developer",
         org: "ALOYT - THE TECHNOLOGY COMPANY",
+        type: "Internship",
         points: [
             "Architected and deployed a cross-platform mobile application using Flutter and Django, enabling real-time speech-to-speech translation for regional Indian dialects to bridge communication gaps for local farmers.",
 			"Engineered a low-latency Python-based translation pipeline on the backend, integrating advanced speech-processing modules to handle complex linguistic nuances with 92% translation accuracy",
@@ -179,6 +183,7 @@ export const experiences: Experience[] = [
         place: "Mumbai, India",
         role: "Python Intern",
         org: "Swabhav Techlabs",
+        type: "Internship",
         points: [
             "Acquired a solid foundation in Python, Django, Flask and Git, applying these technologies to an application development project.",
 			"Successfully developed a Django application as part of a team project, demonstrating hands-on expertise in full-stack development using MySQL and API Development."
@@ -189,6 +194,7 @@ export const experiences: Experience[] = [
         place: "Mumbai, India",
         role: "Student Research Intern",
         org: "KJ Somaiya College of Engineering · Advisor: Prof. Pradnya Gotmare",
+        type: "Internship",
         points: [
             "Conducted in-depth research on advanced data extraction techniques, applying them to train neural models for Natural Language Processing (NLP) tasks under guidance of Prof. Pradnya Gotmare.",
 			"Research aimed at implementing a neural model to extract answers to questions based on given prose. Reviewed various technical papers to get insights into different NLP methodologies."
@@ -201,7 +207,7 @@ export interface Education {
     school: string;
     date: string;
     gpa: string;
-    detail: string;
+    coursework: string[];
 }
 
 export const education: Education[] = [
@@ -210,14 +216,27 @@ export const education: Education[] = [
         school: "University of California - Davis",
         date: "Sep 2025 – Present",
         gpa: "GPA 4.0",
-        detail: "ECS 265: Distributed Database Systems; ECS 235A: Computer & Information Security; ECS 252: Computer Networks; ECS 273: Visual Analytics.",
+        coursework: [
+            "ECS 265: Distributed Database Systems",
+            "ECS 235A: Computer & Information Security",
+            "ECS 252: Computer Networks",
+            "ECS 273: Visual Analytics",
+        ],
     },
     {
         degree: "Bachelor of Technology, Computer Engineering",
         school: "K.J. Somaiya College of Engineering",
         date: "Aug 2018 – Jun 2022",
         gpa: "GPA 9.4",
-        detail: "Advanced Algorithms: Design and Analysis; Relational Database Management Systems; Operating System and System Software; Computer Network; Full-Stack Development Lab; Blockchain; Cloud Computing.",
+        coursework: [
+            "Advanced Algorithms: Design and Analysis",
+            "Relational Database Management Systems",
+            "Operating System and System Software",
+            "Computer Network",
+            "Full-Stack Development Lab",
+            "Blockchain",
+            "Cloud Computing",
+        ],
     },
 ];
 
