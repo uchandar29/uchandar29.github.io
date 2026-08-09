@@ -54,22 +54,20 @@ export function ProjectsSection() {
                 <Icon name={p.icon} style={{ width: 40, height: 40, opacity: 0.35 }} />
               </div>
             )}
-            <span
-              style={{
-                display: "grid",
-                placeItems: "center",
-                width: 48,
-                height: 48,
-                borderRadius: 12,
-                background: "var(--accent-weak)",
-                color: "var(--accent)",
-                marginBottom: 18,
-              }}
-            >
-              <Icon name={p.icon} style={{ width: 22, height: 22 }} />
-            </span>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, marginBottom: 4 }}>
-              <h3 style={{ fontSize: 19, fontWeight: 600, margin: 0, color: "var(--text)" }}>{p.title}</h3>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, marginBottom: 18 }}>
+              <span
+                style={{
+                  display: "grid",
+                  placeItems: "center",
+                  width: 48,
+                  height: 48,
+                  borderRadius: 12,
+                  background: "var(--accent-weak)",
+                  color: "var(--accent)",
+                }}
+              >
+                <Icon name={p.icon} style={{ width: 22, height: 22 }} />
+              </span>
               <span
                 style={{
                   fontSize: 11.5,
@@ -84,6 +82,7 @@ export function ProjectsSection() {
                 {p.category}
               </span>
             </div>
+            <h3 style={{ fontSize: 19, fontWeight: 600, margin: "0 0 4px", color: "var(--text)" }}>{p.title}</h3>
             <div style={{ fontSize: 12.5, color: "var(--muted)", marginBottom: 12 }}>{p.period}</div>
             <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--muted)", margin: "0 0 18px", flex: 1 }}>
               {p.blurb}
