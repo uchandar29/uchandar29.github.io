@@ -222,26 +222,30 @@
 .card-hover-lift {
   transition: transform 0.28s, box-shadow 0.28s, border-color 0.28s;
 }
-.card-hover-lift:hover {
+.card-hover-lift:hover,
+.card-hover-lift:focus-visible {
   transform: translateY(-6px);
   border-color: var(--accent);
+  box-shadow: var(--shadow), 0 0 0 1px var(--accent), 0 0 42px var(--accent-weak);
 }
 
 .card-hover-slide {
-  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
-.card-hover-slide:hover {
+.card-hover-slide:hover,
+.card-hover-slide:focus-visible {
   transform: translateX(4px);
-  background: var(--accent-weak);
   border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 32px var(--accent-weak);
 }
 
 .card-highlight {
-  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
-.card-highlight:hover {
-  background: var(--accent-weak);
+.card-highlight:hover,
+.card-highlight:focus-visible {
   border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 32px var(--accent-weak);
   transform: translateY(-3px);
 }
 

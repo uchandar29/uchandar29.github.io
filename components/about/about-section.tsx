@@ -1,5 +1,5 @@
 import { Icon } from "@/components/icon/icon";
-import { highlights, personalInfo } from "@/lib/portfolio-data";
+import { highlights, personalInfo, whyHireMe } from "@/lib/portfolio-data";
 
 export function AboutSection() {
   return (
@@ -19,15 +19,35 @@ export function AboutSection() {
           <h2 style={{ fontSize: "clamp(28px, 3.4vw, 40px)", fontWeight: 700, margin: "0 0 22px", color: "var(--text)" }}>
             Why hire me?
           </h2>
-          <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--muted)", margin: "0 0 18px" }}>
-            Three-plus years shipping production software across banking, research, and startups. I&apos;ve delivered
-            10+ core banking modules on Oracle&apos;s OBDX platform, cut deployment time 85% through CI/CD
-            containerization, and built ML data pipelines processing 600K+ samples on HPC infrastructure.
+          <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--muted)", margin: "0 0 22px" }}>
+            Everything a 3-YOE SDE role asks for already proven:
           </p>
-          <p style={{ fontSize: 16, lineHeight: 1.75, color: "var(--muted)", margin: "0 0 30px" }}>
-            I like problems that span the whole stack — low-latency backends, clean interfaces, and the DevOps glue
-            in between.
-          </p>
+          <div style={{ display: "grid", gap: 14, margin: "0 0 30px" }}>
+            {whyHireMe.map((point) => (
+              <div key={point.label} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+                <span
+                  style={{
+                    display: "grid",
+                    placeItems: "center",
+                    width: 26,
+                    height: 26,
+                    borderRadius: "50%",
+                    background: "var(--accent-weak)",
+                    color: "var(--accent)",
+                    flexShrink: 0,
+                    marginTop: 1,
+                  }}
+                >
+                  <Icon name={point.icon} style={{ width: 14, height: 14 }} />
+                </span>
+                <p style={{ fontSize: 15, lineHeight: 1.6, color: "var(--muted)", margin: 0 }}>
+                  <span style={{ color: "var(--text)", fontWeight: 600 }}>{point.label}</span>
+                  {" — "}
+                  {point.proof}
+                </p>
+              </div>
+            ))}
+          </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
             <a
               href="#contact"
@@ -68,7 +88,7 @@ export function AboutSection() {
             </a>
           </div>
         </div>
-        <div style={{ display: "grid", gap: 16, alignContent: "start" }}>
+        <div style={{ display: "grid", gap: 16, alignContent: "center" }}>
           {highlights.map((h) => (
             <div
               key={h.label}

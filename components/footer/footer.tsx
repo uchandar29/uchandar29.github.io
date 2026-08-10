@@ -26,7 +26,10 @@ export function Footer() {
           gap: 18,
         }}
       >
-        <div style={{ fontSize: 14, color: "var(--muted)" }}>© 2026 Urmil Jatin Chandarana</div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
+          <div style={{ fontSize: 14, color: "var(--muted)" }}>© 2026 Urmil Jatin Chandarana</div>
+          <div style={{ fontSize: 12.5, color: "var(--muted)", opacity: 0.8 }}>Designed using Claude Design</div>
+        </div>
         <div style={{ display: "flex", gap: 10 }}>
           <a href={personalInfo.links.github} target="_blank" rel="noopener noreferrer" className="icon-btn" style={iconLinkStyle} aria-label="GitHub">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

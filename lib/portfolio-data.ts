@@ -8,7 +8,7 @@ export const personalInfo = {
     phone: "+1 530-760-6834",
     phoneHref: "+15307606834",
     email: "urmilchandarana@gmail.com",
-    bio: "I build resilient systems end to end — from core banking modules at Oracle to large-scale ML data pipelines and a community-first delivery platform. Currently a CS master's student at UC Davis, based in Davis, California.",
+    bio: "My focus: cloud computing, distributed systems, and vision-language models. I spent ~3 years at Oracle engineering core banking modules and CI/CD pipelines on Spring Boot microservices, and I'm now an MS Computer Science student at UC Davis researching dataset benchmarking and experimenting with Vision-Language Models (VLMs) for agricultural applications",
     links: {
         github: "https://github.com/uchandar29",
         githubHandle: "github.com/uchandar29",
@@ -43,14 +43,48 @@ export const highlights: Highlight[] = [
         label: "In close proximity from San Francisco",
     },
     {
-        icon: "briefcase",
-        value: "3+ yrs",
-        label: "Shipping production software",
-    },
-    {
         icon: "graduation-cap",
         value: "4.0 GPA",
         label: "MS Computer Science · UC Davis",
+    },
+    {
+        icon: "sparkles",
+        value: "Cloud · Distributed Systems · VLMs",
+        label: "Current technical focus & research",
+    },
+    {
+        icon: "briefcase",
+        value: "~3 yrs",
+        label: "Production software experience in industry",
+    }
+];
+
+export interface WhyHireMePoint {
+    icon: string;
+    label: string;
+    proof: string;
+}
+
+export const whyHireMe: WhyHireMePoint[] = [
+    {
+        icon: "rocket",
+        label: "Ships production systems at scale",
+        proof: "10+ core banking modules live at a major European bank, built on Spring Boot & Java microservices",
+    },
+    {
+        icon: "gauge",
+        label: "Cuts deployment friction",
+        proof: "85% faster environment setup, 100% environment parity via Docker + CI/CD",
+    },
+    {
+        icon: "shield-check",
+        label: "Owns outcomes end-to-end",
+        proof: "Sole technical point-of-contact for 7 client-facing product upgrades, near zero-error execution",
+    },
+    {
+        icon: "sparkles",
+        label: "Stays technically current",
+        proof: "Now researching distributed systems & experimenting VLMs for agricultural use cases at UC Davis under Prof. Mason Earles",
     },
 ];
 
@@ -142,7 +176,7 @@ export const experiences: Experience[] = [
         date: "Apr 2026 – Present",
         place: "Davis, California",
         role: "Graduate Student Researcher",
-        org: "PAIBL Lab · Project AgML, UC Davis · Advisor: Prof. Mason Earles",
+        org: "PAIBL Lab · Project AgML · Advisor: Prof. Mason Earles",
         type: "Part-Time",
         points: [
             "Designed and built an automated VLM dataset ingestion pipeline leveraging an open-source reasoning model that analyzes raw datasets, generates schema mappings, and convert outputs to Parquet format for direct upload to HuggingFace.",

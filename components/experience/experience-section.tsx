@@ -111,10 +111,20 @@ export function ExperienceSection() {
                 </span>
               </div>
               <div style={{ fontSize: 15, color: "var(--accent)", fontWeight: 500, marginBottom: 14 }}>{e.org}</div>
-              <ul style={{ margin: 0, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 9 }}>
+              <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 9 }}>
                 {e.points.map((p) => (
-                  <li key={p} style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--muted)" }}>
-                    {p}
+                  <li key={p} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 14.5, lineHeight: 1.6, color: "var(--muted)" }}>
+                    <span
+                      style={{
+                        flexShrink: 0,
+                        marginTop: 8,
+                        width: 6,
+                        height: 6,
+                        borderRadius: "50%",
+                        background: "var(--accent)",
+                      }}
+                    />
+                    <span>{p}</span>
                   </li>
                 ))}
               </ul>
