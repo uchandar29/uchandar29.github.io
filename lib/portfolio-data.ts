@@ -338,7 +338,7 @@ export const gallery: GalleryItem[] = [
     {
         id: "image-rocky-mountain-1",
         caption: "Colorado Rocky Mountains",
-        note: "A moment of relaxation and awe alongside brother from another mother, @harshmukeshsharma.",
+        note: "A moment of relaxation and awe alongside brother from another mother, @harshmukeshsharma",
         image: "/images/gallery/rocky_mountains.jpeg",
         orientation: "portrait",
     },
@@ -352,7 +352,7 @@ export const gallery: GalleryItem[] = [
     {
         id: "image-mount-sky-blue",
         caption: "Mountains, Blue Sky, and Marmots",
-        note: "Found this while climbing my first 14er, Mount Sky Blue. !!",
+        note: "Found this little guy while climbing my first 14er, Mount Sky Blue!!",
         image: "/images/gallery/mount_blue_sky_marmots.jpeg",
         orientation: "portrait",
     },
