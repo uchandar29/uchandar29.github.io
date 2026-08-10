@@ -8,7 +8,7 @@ export const personalInfo = {
     phone: "+1 530-760-6834",
     phoneHref: "+15307606834",
     email: "urmilchandarana@gmail.com",
-    bio: "My focus: cloud computing, distributed systems, and vision-language models. I spent ~3 years at Oracle engineering core banking modules and CI/CD pipelines on Spring Boot microservices, and I'm now an MS Computer Science student at UC Davis researching dataset benchmarking and experimenting with Vision-Language Models (VLMs) for agricultural applications",
+    bio: "I spent ~3 years at Oracle engineering core banking modules and CI/CD pipelines on Spring Boot microservices, and I'm now an MS Computer Science student at UC Davis strengthening my skills on Cloud Computing & Distributed Systems while experimenting with Vision-Language Models (VLMs) for agricultural applications and researching on dataset benchmarking for better evaluation models.",
     links: {
         github: "https://github.com/uchandar29",
         githubHandle: "github.com/uchandar29",
