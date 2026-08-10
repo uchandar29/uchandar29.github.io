@@ -289,3 +289,20 @@
     gap: 7px;
   }
 }
+
+/* Nav: collapse the full link row into a hamburger menu on narrow screens */
+.nav-mobile-toggle,
+.nav-mobile-panel {
+  display: none;
+}
+@media (max-width: 780px) {
+  .nav-links-desktop {
+    display: none !important;
+  }
+  .nav-mobile-toggle {
+    display: grid !important;
+  }
+  .nav-mobile-panel {
+    display: flex !important;
+  }
+}
