@@ -27,7 +27,7 @@ function buildSlides(items: GalleryItem[]): GalleryItem[][] {
 
 function GalleryCard({ item, wide }: { item: GalleryItem; wide: boolean }) {
   const aspectRatio = item.orientation === "landscape" ? "4/3" : "3/4";
-  const width = wide ? "min(680px, 92vw)" : "min(260px, 42vw)";
+  const width = wide ? "min(680px, 92vw)" : "min(360px, 46vw)";
 
   return (
     <div
@@ -46,7 +46,7 @@ function GalleryCard({ item, wide }: { item: GalleryItem; wide: boolean }) {
             src={item.image}
             alt={item.caption}
             fill
-            sizes={wide ? "(max-width: 720px) 92vw, 680px" : "(max-width: 640px) 42vw, 260px"}
+            sizes={wide ? "(max-width: 720px) 92vw, 680px" : "(max-width: 640px) 46vw, 360px"}
             style={{ objectFit: "cover" }}
           />
         </div>

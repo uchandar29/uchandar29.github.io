@@ -356,4 +356,18 @@ export const gallery: GalleryItem[] = [
         image: "/images/gallery/mount_blue_sky_marmots.jpeg",
         orientation: "portrait",
     },
+    {
+        id: "image-rocky-mountain-3",
+        caption: "Lake Haiyaha, Rocky Mountains",
+        note: "Can you believe this view? 1.2 miles from Dream Lake Trailhead, almost took our breath away with the beauty of Lake Haiyaha in the Rocky Mountains.",
+        image: "/images/gallery/rocky_mountains_lake_haiyaha.jpeg",
+        orientation: "portrait",
+    },
+    {
+        id: "image-laguna-beach-1",
+        caption: "Laguna Beach Getaway",
+        note: "Decided to stop by Laguna Beach on the way back after touching Mexico Border as part of the Boys Trip !!",
+        image: "/images/gallery/laguna_beach.jpeg",
+        orientation: "landscape",
+    },
 ];
