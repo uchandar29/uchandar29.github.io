@@ -148,7 +148,7 @@ export const experiences: Experience[] = [
             "Designed and built an automated VLM dataset ingestion pipeline leveraging an open-source reasoning model that analyzes raw datasets, generates schema mappings, and convert outputs to Parquet format for direct upload to HuggingFace.",
             "Developed a dataset benchmarking framework across structural quality, content difficulty, diversity, and annotation reliability, producing a leaderboard to guide selection of future agricultural VLM benchmark datasets",
             "Building a prompt-translation module combining work on OFAT and combinatorial search over an LLM/VLM to auto-generate optimal per-dataset, per-model prompts, improving zero-shot object detection accuracy for agricultural VLMs",
-			"Collaborating with dataset authors to formalize data-sharing agreements and integrate external agricultural datasets into the AgML ecosystem"
+            "Collaborating with dataset authors to formalize data-sharing agreements and integrate external agricultural datasets into the AgML ecosystem",
         ],
     },
     {
@@ -161,11 +161,11 @@ export const experiences: Experience[] = [
             "Engineered 10+ core banking modules for the Oracle Banking Digital Experience (OBDX) platform, using Spring Boot, Java 8, REST APIs/SOAP APIs & Microservices for a major European Bank",
             "Streamlined DevOps pipelines, reducing manual intervention by 30% using tools including Jenkins & Gradle and implemented automation guidelines to enhance team efficiency",
             "Orchestrated the migration from a frequent traditional application setup to a containerized environment using CI/CD pipelines & Docker, reducing environment setup and deployment time by 85% while achieving 100% environment parity across SDLC stages",
-			"Led 7 product patch set upgrades, ensuring meticulous planning and error-free execution and acted as a technical SPC (Single point-of-contact) for client stakeholders",
-			"Spearheaded the development and delivery of critical modules, including a Login system via CAS & Bill Payment Functionality, ensuring seamless integration under tight deadlines alongside collaborating with clients."
+            "Led 7 product patch set upgrades, ensuring meticulous planning and error-free execution and acted as a technical SPC (Single point-of-contact) for client stakeholders",
+            "Spearheaded the development and delivery of critical modules, including a Login system via CAS & Bill Payment Functionality, ensuring seamless integration under tight deadlines alongside collaborating with clients.",
         ],
     },
-	{
+    {
         date: "Apr 2021 – Jul 2021",
         place: "Mumbai, India",
         role: "Jr. Technology Developer",
@@ -173,12 +173,12 @@ export const experiences: Experience[] = [
         type: "Internship",
         points: [
             "Architected and deployed a cross-platform mobile application using Flutter and Django, enabling real-time speech-to-speech translation for regional Indian dialects to bridge communication gaps for local farmers.",
-			"Engineered a low-latency Python-based translation pipeline on the backend, integrating advanced speech-processing modules to handle complex linguistic nuances with 92% translation accuracy",
-			"Optimized end-to-end latency by 40% through the implementation of asynchronous processing and efficient data streaming between the Flutter frontend and Django backend, ensuring a seamless walkie-talkie user experience",
-			"Designed a scalable API infrastructure to manage concurrent audio streams, utilizing optimized request-handling to maintain system stability during peak usage hours."
+            "Engineered a low-latency Python-based translation pipeline on the backend, integrating advanced speech-processing modules to handle complex linguistic nuances with 92% translation accuracy",
+            "Optimized end-to-end latency by 40% through the implementation of asynchronous processing and efficient data streaming between the Flutter frontend and Django backend, ensuring a seamless walkie-talkie user experience",
+            "Designed a scalable API infrastructure to manage concurrent audio streams, utilizing optimized request-handling to maintain system stability during peak usage hours.",
         ],
     },
-	{
+    {
         date: "Jan 2021 – Mar 2021",
         place: "Mumbai, India",
         role: "Python Intern",
@@ -186,10 +186,10 @@ export const experiences: Experience[] = [
         type: "Internship",
         points: [
             "Acquired a solid foundation in Python, Django, Flask and Git, applying these technologies to an application development project.",
-			"Successfully developed a Django application as part of a team project, demonstrating hands-on expertise in full-stack development using MySQL and API Development."
+            "Successfully developed a Django application as part of a team project, demonstrating hands-on expertise in full-stack development using MySQL and API Development.",
         ],
     },
-	{
+    {
         date: "May 2020 – Jun 2020",
         place: "Mumbai, India",
         role: "Student Research Intern",
@@ -197,7 +197,7 @@ export const experiences: Experience[] = [
         type: "Internship",
         points: [
             "Conducted in-depth research on advanced data extraction techniques, applying them to train neural models for Natural Language Processing (NLP) tasks under guidance of Prof. Pradnya Gotmare.",
-			"Research aimed at implementing a neural model to extract answers to questions based on given prose. Reviewed various technical papers to get insights into different NLP methodologies."
+            "Research aimed at implementing a neural model to extract answers to questions based on given prose. Reviewed various technical papers to get insights into different NLP methodologies.",
         ],
     },
 ];
@@ -260,7 +260,16 @@ export const featured: Project[] = [
         hasImage: false,
         slotId: "proj-agml-benchmarking",
         blurb: "A benchmarking pipeline for computer vision datasets on HuggingFace. Evaluates dataset quality across structural, embedding-based, and diversity metrics — with UMAP visualizations of the embedding space. Designed to be task-agnostic, supporting image classification, object detection, segmentation, and VLM datasets. Built for reproducible evaluation with SLURM support for GPU clusters.",
-        stack: ["Python", "HuggingFace", "DINOv2", "FAISS", "UMAP", "scikit-learn", "PyTorch", "SLURM" ],
+        stack: [
+            "Python",
+            "HuggingFace",
+            "DINOv2",
+            "FAISS",
+            "UMAP",
+            "scikit-learn",
+            "PyTorch",
+            "SLURM",
+        ],
     },
     {
         title: "Lily",
@@ -270,7 +279,19 @@ export const featured: Project[] = [
         hasImage: false,
         slotId: "proj-lily-hackathon",
         blurb: "A voice-first, AI-powered maternal health triage system designed to provide accessible prenatal and postpartum guidance, clinical screening, and doctor escalation via standard phone calls in maternal healthcare deserts.",
-        stack: ["Python", "React.js", "PostgreSQL", "Tailwind CSS", "Claude", "ChromaDB", "PineconeDB", "Twilio", "Eleven Labs", "OpenBioLLM", "SLURM"],
+        stack: [
+            "Python",
+            "React.js",
+            "PostgreSQL",
+            "Tailwind CSS",
+            "Claude",
+            "ChromaDB",
+            "PineconeDB",
+            "Twilio",
+            "Eleven Labs",
+            "OpenBioLLM",
+            "SLURM",
+        ],
     },
     {
         title: "Smart CrowdFunding Using Blockchain",
@@ -280,7 +301,18 @@ export const featured: Project[] = [
         hasImage: false,
         slotId: "proj-smart-crowdfunding",
         blurb: "We have developed a Smart Crowdfunding application based on Blockchain technology i.e. a decentralized application that replaces a middle-man (like a Bank or a human) with a smart block of code ,or so we call it a smart contract, that handles all the functioning related to the donations. A smart contract helps to block the funds within the Blockchain until the campaign contributors agrees to release them to the organizing entity.",
-        stack: ["Node.js", "React.js", "Bootstrap 5", "MongoDB", "Blockchain", "Ethereum", "Ganache", "Solidity", "Web3.js", "Metamask"],
+        stack: [
+            "Node.js",
+            "React.js",
+            "Bootstrap 5",
+            "MongoDB",
+            "Blockchain",
+            "Ethereum",
+            "Ganache",
+            "Solidity",
+            "Web3.js",
+            "Metamask",
+        ],
     },
 ];
 
@@ -288,20 +320,40 @@ export interface GalleryItem {
     id: string;
     caption: string;
     note: string;
-    // Path to the photo, e.g. "/images/gallery/campus.jpg". Drop the file in
-    // public/images/gallery/ and set this field to show it instead of the
-    // placeholder. Leave unset to keep the "Add a photo" placeholder.
+    /*
+        Path to the photo, e.g. "/images/gallery/campus.jpg". Drop the file in
+        public/images/gallery/ and set this field to show it instead of the
+        placeholder. Leave unset to keep the "Add a photo" placeholder.
+    */
     image?: string;
+    /*
+        "portrait" (default) or "landscape". Portrait photos are paired two
+        per slide; landscape photos always get their own full-width slide so
+        they display properly instead of being cropped into a tall box.
+    */
+    orientation?: "portrait" | "landscape";
 }
 
 export const gallery: GalleryItem[] = [
     {
-        id: "gallery-1",
-        caption: "Caption one",
-        note: "Where was this? Add a short note.",
+        id: "image-rocky-mountain-1",
+        caption: "Colorado Rocky Mountains",
+        note: "A moment of relaxation and awe alongside brother from another mother, @harshmukeshsharma.",
+        image: "/images/gallery/rocky_mountains.jpeg",
+        orientation: "portrait",
     },
-    { id: "gallery-2", caption: "Caption two", note: "A favourite moment." },
-    { id: "gallery-3", caption: "Caption three", note: "Add a short note." },
-    { id: "gallery-4", caption: "Caption four", note: "Travels & talks." },
-    { id: "gallery-5", caption: "Caption five", note: "The story here." },
+    {
+        id: "image-rocky-mountain-2",
+        caption: "Rocky Mountains · Emerald Lake",
+        note: "What a view! Emerald Lake was a highlight of the trip to the Rockies!!",
+        image: "/images/gallery/rocky_mountains_emerald_lake.jpeg",
+        orientation: "portrait",
+    },
+    {
+        id: "image-mount-sky-blue",
+        caption: "Mountains, Blue Sky, and Marmots",
+        note: "Found this while climbing my first 14er, Mount Sky Blue. !!",
+        image: "/images/gallery/mount_blue_sky_marmots.jpeg",
+        orientation: "portrait",
+    },
 ];

@@ -1,13 +1,84 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import { Icon } from "@/components/icon/icon";
-import { gallery } from "@/lib/portfolio-data";
+import { gallery, type GalleryItem } from "@/lib/portfolio-data";
+
+// Groups gallery items into slides: consecutive portrait photos are paired
+// two-per-slide, while any landscape photo (or a leftover odd portrait) gets
+// its own full-width slide.
+function buildSlides(items: GalleryItem[]): GalleryItem[][] {
+  const slides: GalleryItem[][] = [];
+  let i = 0;
+  while (i < items.length) {
+    const current = items[i];
+    const next = items[i + 1];
+    if (current.orientation !== "landscape" && next && next.orientation !== "landscape") {
+      slides.push([current, next]);
+      i += 2;
+    } else {
+      slides.push([current]);
+      i += 1;
+    }
+  }
+  return slides;
+}
+
+function GalleryCard({ item, wide }: { item: GalleryItem; wide: boolean }) {
+  const aspectRatio = item.orientation === "landscape" ? "4/3" : "3/4";
+  const width = wide ? "min(680px, 92vw)" : "min(260px, 42vw)";
+
+  return (
+    <div
+      style={{
+        width,
+        borderRadius: 20,
+        overflow: "hidden",
+        background: "var(--surface)",
+        border: "1px solid var(--border)",
+        boxShadow: "var(--shadow)",
+      }}
+    >
+      {item.image ? (
+        <div style={{ position: "relative", aspectRatio, background: "var(--bg)" }}>
+          <Image
+            src={item.image}
+            alt={item.caption}
+            fill
+            sizes={wide ? "(max-width: 720px) 92vw, 680px" : "(max-width: 640px) 42vw, 260px"}
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      ) : (
+        <div
+          style={{
+            aspectRatio,
+            background: "var(--bg)",
+            display: "grid",
+            placeItems: "center",
+            gap: 8,
+            color: "var(--muted)",
+          }}
+        >
+          <Icon name="image-plus" style={{ width: 30, height: 30, opacity: 0.4 }} />
+          <span style={{ fontSize: 12.5 }}>Add a photo</span>
+        </div>
+      )}
+      <div style={{ padding: "15px 18px" }}>
+        <div style={{ fontSize: 15, fontWeight: 600, color: "var(--text)", marginBottom: 2 }}>{item.caption}</div>
+        <div style={{ fontSize: 13, color: "var(--muted)" }}>{item.note}</div>
+      </div>
+    </div>
+  );
+}
 
 export function GallerySection() {
+  const slides = useMemo(() => buildSlides(gallery), []);
   const [index, setIndex] = useState(0);
-  const count = gallery.length;
+  const count = slides.length;
+
+  if (count === 0) return null;
 
   const next = () => setIndex((i) => (i + 1) % count);
   const prev = () => setIndex((i) => (i + count - 1) % count);
@@ -81,58 +152,32 @@ export function GallerySection() {
               transition: "transform 0.55s cubic-bezier(0.16,1,0.3,1)",
             }}
           >
-            {gallery.map((item) => (
-              <div key={item.id} style={{ minWidth: "100%", display: "flex", justifyContent: "center", padding: 6 }}>
+            {slides.map((slide) => {
+              const isSoloWide = slide.length === 1 && slide[0].orientation === "landscape";
+              return (
                 <div
+                  key={slide.map((item) => item.id).join("-")}
                   style={{
-                    width: "min(340px, 86vw)",
-                    borderRadius: 20,
-                    overflow: "hidden",
-                    background: "var(--surface)",
-                    border: "1px solid var(--border)",
-                    boxShadow: "var(--shadow)",
+                    minWidth: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "flex-start",
+                    gap: 16,
+                    padding: 6,
                   }}
                 >
-                  {item.image ? (
-                    <div style={{ position: "relative", aspectRatio: "3/4", background: "var(--bg)" }}>
-                      <Image
-                        src={item.image}
-                        alt={item.caption}
-                        fill
-                        sizes="(max-width: 640px) 86vw, 340px"
-                        style={{ objectFit: "cover" }}
-                      />
-                    </div>
-                  ) : (
-                    <div
-                      style={{
-                        aspectRatio: "3/4",
-                        background: "var(--bg)",
-                        display: "grid",
-                        placeItems: "center",
-                        gap: 8,
-                        color: "var(--muted)",
-                      }}
-                    >
-                      <Icon name="image-plus" style={{ width: 30, height: 30, opacity: 0.4 }} />
-                      <span style={{ fontSize: 12.5 }}>Add a photo</span>
-                    </div>
-                  )}
-                  <div style={{ padding: "15px 18px" }}>
-                    <div style={{ fontSize: 15, fontWeight: 600, color: "var(--text)", marginBottom: 2 }}>
-                      {item.caption}
-                    </div>
-                    <div style={{ fontSize: 13, color: "var(--muted)" }}>{item.note}</div>
-                  </div>
+                  {slide.map((item) => (
+                    <GalleryCard key={item.id} item={item} wide={isSoloWide} />
+                  ))}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "center", gap: 10, marginTop: 24 }}>
-          {gallery.map((item, i) => (
+          {slides.map((slide, i) => (
             <button
-              key={item.id}
+              key={slide.map((item) => item.id).join("-")}
               onClick={() => setIndex(i)}
               aria-label={`Go to slide ${i + 1}`}
               className="dot-btn"
