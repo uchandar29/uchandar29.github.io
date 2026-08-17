@@ -1,6 +1,7 @@
 import { Header } from "@/components/header/header";
 import { HeroSection } from "@/components/hero/hero-section";
 import { AboutSection } from "@/components/about/about-section";
+import { QuoteSection } from "@/components/quote/quote-section";
 import { SkillsSection } from "@/components/skills/skills-section";
 import { ExperienceSection } from "@/components/experience/experience-section";
 import { EducationSection } from "@/components/education/education-section";
@@ -18,6 +19,7 @@ export default function Home() {
         <Header />
         <HeroSection />
         <AboutSection />
+        <QuoteSection />
         <SkillsSection />
         <ExperienceSection />
         <EducationSection />
