@@ -226,7 +226,16 @@
 .card-hover-lift:focus-visible {
   transform: translateY(-6px);
   border-color: var(--accent);
-  box-shadow: var(--shadow), 0 0 0 1px var(--accent), 0 0 42px var(--accent-weak);
+  box-shadow: var(--shadow), 0 0 0 1px var(--accent), 0 0 34px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.project-card-glow {
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.project-card-glow:hover,
+.project-card-glow:focus-within {
+  border-color: var(--accent);
+  box-shadow: var(--shadow), 0 0 0 1px var(--accent), 0 0 30px color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
 .card-hover-slide {
@@ -236,7 +245,7 @@
 .card-hover-slide:focus-visible {
   transform: translateX(4px);
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent), 0 0 32px var(--accent-weak);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 26px color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
 .card-highlight {
@@ -245,7 +254,7 @@
 .card-highlight:hover,
 .card-highlight:focus-visible {
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent), 0 0 32px var(--accent-weak);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 26px color-mix(in srgb, var(--accent) 40%, transparent);
   transform: translateY(-3px);
 }
 
@@ -284,6 +293,9 @@
     grid-template-columns: 1fr !important;
   }
   .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .projects-grid {
     grid-template-columns: 1fr !important;
   }
 }

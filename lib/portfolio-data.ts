@@ -283,11 +283,16 @@ export interface Project {
     slotId: string;
     blurb: string;
     stack: string[];
+    /*
+        Link to the GitHub repo for this project, if it's public. Leave unset
+        to show a "Private repository" badge instead of a broken/missing link.
+    */
+    githubUrl?: string;
 }
 
 export const featured: Project[] = [
     {
-        title: "AgML Benchmarking",
+        title: "AgML-Benchmarking: An Agricultural Dataset Benchmarking Pipeline",
         category: "AI / ML",
         period: "June 2026 – Present",
         icon: "wheat",
@@ -303,7 +308,10 @@ export const featured: Project[] = [
             "scikit-learn",
             "PyTorch",
             "SLURM",
+            "Ollama.cpp",
+            "vLLM"
         ],
+        githubUrl: "https://github.com/uchandar29/agml-benchmarking"
     },
     {
         title: "Lily",
@@ -318,14 +326,13 @@ export const featured: Project[] = [
             "React.js",
             "PostgreSQL",
             "Tailwind CSS",
-            "Claude",
-            "ChromaDB",
-            "PineconeDB",
+            "Vector Databases",
             "Twilio",
             "Eleven Labs",
             "OpenBioLLM",
-            "SLURM",
+            "Claude Code"
         ],
+        githubUrl: "https://github.com/localbite-davis/Lily"
     },
     {
         title: "Smart CrowdFunding Using Blockchain",
@@ -347,6 +354,7 @@ export const featured: Project[] = [
             "Web3.js",
             "Metamask",
         ],
+        githubUrl: "https://github.com/uchandar29/smart-crowdfunding"
     },
 ];
 

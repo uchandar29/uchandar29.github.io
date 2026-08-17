@@ -14,12 +14,13 @@ export function ProjectsSection() {
         </h2>
       </div>
       <p style={{ fontSize: 15, color: "var(--muted)", margin: "0 0 34px" }}>
-        Systems I&apos;ve designed and shipped.
+        Applications I&apos;ve designed and shipped.
       </p>
       <div
+        className="projects-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+          gridTemplateColumns: "repeat(2, 1fr)",
           gap: 22,
           marginBottom: 56,
         }}
@@ -27,7 +28,7 @@ export function ProjectsSection() {
         {featured.map((p) => (
           <div
             key={p.title}
-            className="card-hover-lift"
+            className="project-card-glow"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -54,7 +55,7 @@ export function ProjectsSection() {
                 <Icon name={p.icon} style={{ width: 40, height: 40, opacity: 0.35 }} />
               </div>
             )}
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, marginBottom: 18 }}>
+            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 10, marginBottom: 18 }}>
               <span
                 style={{
                   display: "grid",
@@ -68,19 +69,22 @@ export function ProjectsSection() {
               >
                 <Icon name={p.icon} style={{ width: 22, height: 22 }} />
               </span>
-              <span
-                style={{
-                  fontSize: 11.5,
-                  fontWeight: 600,
-                  padding: "4px 10px",
-                  borderRadius: 7,
-                  background: "var(--surface-2)",
-                  color: "var(--muted)",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                {p.category}
-              </span>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 6 }}>
+                <span
+                  style={{
+                    fontSize: 11.5,
+                    fontWeight: 600,
+                    padding: "4px 10px",
+                    borderRadius: 7,
+                    background: "var(--surface-2)",
+                    color: "var(--muted)",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {p.category}
+                </span>
+                <span style={{ fontSize: 12, color: "var(--muted)", whiteSpace: "nowrap" }}>{p.period}</span>
+              </div>
             </div>
             <h3
               style={{
@@ -88,17 +92,25 @@ export function ProjectsSection() {
                 fontWeight: 600,
                 lineHeight: 1.3,
                 minHeight: 50,
-                margin: "0 0 4px",
+                margin: "0 0 12px",
                 color: "var(--text)",
               }}
             >
               {p.title}
             </h3>
-            <div style={{ fontSize: 12.5, color: "var(--muted)", marginBottom: 12 }}>{p.period}</div>
-            <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--muted)", margin: "0 0 18px", flex: 1 }}>
+            <p
+              style={{
+                fontSize: 14.5,
+                lineHeight: 1.6,
+                color: "var(--muted)",
+                margin: "0 0 18px",
+                flex: 1,
+                textAlign: "justify",
+              }}
+            >
               {p.blurb}
             </p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 7, marginBottom: 16 }}>
               {p.stack.map((s) => (
                 <span
                   key={s}
@@ -113,6 +125,40 @@ export function ProjectsSection() {
                   {s}
                 </span>
               ))}
+            </div>
+            <div style={{ paddingTop: 14, borderTop: "1px solid var(--border)" }}>
+              {p.githubUrl ? (
+                <a
+                  href={p.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon-btn"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 7,
+                    fontSize: 13,
+                    fontWeight: 600,
+                    color: "var(--text)",
+                  }}
+                >
+                  <Icon name="github" style={{ width: 15, height: 15 }} />
+                  GitHub
+                </a>
+              ) : (
+                <span
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 7,
+                    fontSize: 12.5,
+                    color: "var(--muted)",
+                  }}
+                >
+                  <Icon name="lock" style={{ width: 13, height: 13 }} />
+                  Private repository
+                </span>
+              )}
             </div>
           </div>
         ))}
