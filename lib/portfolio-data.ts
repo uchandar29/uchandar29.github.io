@@ -311,7 +311,7 @@ export const featured: Project[] = [
             "Ollama.cpp",
             "vLLM"
         ],
-        githubUrl: "https://github.com/uchandar29/agml-benchmarking"
+        githubUrl: "https://github.com/Project-AgML/agml-benchmarking"
     },
     {
         title: "Lily",
